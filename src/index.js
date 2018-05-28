@@ -1,8 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import {Provider} from 'react-redux';
+// import configureStore from './store/configureStore';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import AppRouter from './routers/AppRouter';
+import registerServiceWorker from './registerServiceWorker';
+import 'normalize.css/normalize.css';
+import './index.css';
+
+// const store = configureStore();
+const jsx = (
+    <div className="container">
+        <AppRouter/>
+    </div>
+
+);
+ReactDOM.render(jsx, document.getElementById('root'));
 registerServiceWorker();

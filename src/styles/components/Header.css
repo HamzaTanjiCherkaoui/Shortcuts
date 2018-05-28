@@ -1,0 +1,23 @@
+.Header {
+    background-image: linear-gradient(to right top, #357edd, #276fba, #236098, #255077, #274057);
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    -ms-transform: scale(1.02, 1); /* IE 9 */
+    -webkit-transform: scale(1.02, 1); /* Safari */
+    transform: scale(1.02, 1);
+    
+}
+.Header__Title {
+    color:  #fff;
+    text-align: center;
+    flex: 0.5;
+    
+}
+.Header__Slogon {
+    color: #fff;
+    background: #274057;
+    display: block;
+    padding: 10px;
+}

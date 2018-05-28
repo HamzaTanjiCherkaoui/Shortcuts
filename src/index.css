@@ -1,5 +1,49 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Palanquin+Dark');
+
+body{
+  background: #f1f4f5;
+  color: #274057;
+  font-family: 'Palanquin Dark', sans-serif;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+
+}
+
+.Button {
+  display: flex;
+ border:1px solid #dadada ;
+ border-radius: 50px;
+ font-weight: 100;
+    font-size: 14px;
+    padding-right: 24px;
+    padding-left: 24px;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+    
+}
+.Button:hover {
+  border:1px solid #fff ;
+  background-color: #274057;
+  color: #fff;
+}
+input,select,button {
+  background-color:#f1f4f5;
+  border : 1px solid #fff;
+  padding: 5px 20px;
+  outline:none;
+  font-weight: 100;
+  font-size: 14px;
+}
+button {
+  cursor: pointer;
+}
+input:focus,select:focus{
+  border: 1px solid #dee0e0;
+}
+.small-margin-left {
+margin-left: 4px;
 }

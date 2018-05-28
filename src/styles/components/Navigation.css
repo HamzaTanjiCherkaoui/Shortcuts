@@ -1,0 +1,31 @@
+.Navbar{
+    display: flex;
+    border-bottom: 4px solid #fafafa;
+    padding : 12px;
+    flex: 1;
+    align-items: center;
+}
+
+.Navbar__Items {
+    display:flex;
+    flex: 1;
+  }
+
+  .Navbar__Link {
+    padding:  12px 24px 12px 24px ;
+    font-weight: 100;
+    font-size: 14px;
+  }
+  .Navbar__Link a {
+      text-decoration: none;
+      color: inherit;
+  }
+  .Navbar__Items--right {
+    justify-content: flex-end;
+}
+
+.Navbar__Link-brand {
+    font-weight: 100;
+    
+    
+}
