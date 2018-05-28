@@ -2,10 +2,10 @@ import React from 'react';
 import ShortcutItem from './ShortcutItem';
 import '../styles/components/ShortcutsList.css';
 
-const ar = [1,2,3,4,5,6,7];
 
-export default() => (
+
+export default(props) => (
     <div className="ShortcutsList">
-        {ar.map(a=>(<ShortcutItem key={a} />))}        
+        {props.shortcuts.map(shortcut=>(<ShortcutItem key={shortcut.id} />))}        
     </div>
-)
+) 

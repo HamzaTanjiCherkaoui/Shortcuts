@@ -1,13 +1,10 @@
 const shortcutsReducerDefaultState = [
-    {
-        id: 1,
-        buttons : ["Ctrl","A","Z"]
-    }
 ]
 
 const shortcutsReducer = (state = shortcutsReducerDefaultState, action) => {
     switch (action.type) {
-        
+        case 'SET_SHORTCUTS':
+        return [...state,...action.shortcuts];
         default:
             return state;
     }

@@ -9,6 +9,7 @@ import 'normalize.css/normalize.css';
 import './index.css';
 
 const store = configureStore();
+
 const jsx = (
     <div className="container">
     <Provider store={store}>
