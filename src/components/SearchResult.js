@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import '../styles/components/SearchResult.css';
 import ShortcutsList from './ShortcutsList';
-import {fetchShortcuts} from '../actions/shortcuts';
+
 
 class SearchResult extends React.Component {
     render() {

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React  from 'react';
 import Modal from './SimpleModal';
 
 export default function Hoc(WrappedComponent) {
@@ -11,11 +11,16 @@ export default function Hoc(WrappedComponent) {
                 return {showModal: false}
             })
         }
+        componentWillReceiveProps=(nextProps)=>  {
+            this.setState(() => {
+                return {showModal: nextProps.showModal}
+            })
+        }
         render() {
-            const {children} = this.props;
+            
             return (
                 <div>
-                    {(this.state.showModal) && <Modal onCloseRequest={this.hideModal}><WrappedComponent hideModal={this.hideModal}/></Modal>
+                    {(this.state.showModal) && <Modal onCloseRequest={this.hideModal}><WrappedComponent hideModal={this.hideModal} /></Modal>
 }</div>
             );
         }

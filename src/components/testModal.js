@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import isModal from './utils/HOCModal';
+
+@isModal
+
 class TestModal extends Component {
     render () {
         return (<div>
@@ -8,4 +11,4 @@ class TestModal extends Component {
              </div>)
     }
 }
-export default isModal(TestModal);
+export default TestModal;

@@ -4,18 +4,24 @@ import {fetchShortcuts} from '../../actions/shortcuts';
 import Header from '../Header';
 import SearchBar from '../SearchBar';
 import SearchResult from '../SearchResult';
-import Modal from '../utils/ModalLauncher';
-import TestModal from '../testModal';
+import ShortcutModal from '../ShortcutModal';
+
 class HomePage extends React.Component {
-    // <Modal showModal={true}>Hello Modal</Modal>
+
     state = {
-        ModalIsVisible: true
+        modalIsVisible: true
     }
 
+    displayModal = () => {
+        this.setState((prevState)=>{
+            return {modalIsVisible: true}
+        })
+    }
     render() {
         return (
             <div>
-                <TestModal showModal={this.state.ModalIsVisible}/>
+                <ShortcutModal showModal={this.state.modalIsVisible}/>
+                <button onClick={this.displayModal} />
                 <Header/>
                 <SearchBar/>
                 <SearchResult/>
