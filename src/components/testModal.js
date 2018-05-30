@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import isModal from './utils/HOCModal';
-
 class TestModal extends Component {
-    constructor(props) {
-        super(props);
-    }    
     render () {
         return (<div>
              <p>hello Modal</p> 

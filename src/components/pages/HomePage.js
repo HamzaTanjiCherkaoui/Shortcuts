@@ -8,25 +8,14 @@ import Modal from '../utils/ModalLauncher';
 import TestModal from '../testModal';
 class HomePage extends React.Component {
     // <Modal showModal={true}>Hello Modal</Modal>
+    state = {
+        ModalIsVisible: true
+    }
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            ModalIsVisible: true
-        }
-        this.handleCloseModal = this.handleCloseModal.bind(this);
-    }
-    handleCloseModal() {
-        
-        this.setState(()=>{
-            return {ModalIsVisible:false}
-        })
-        console.log(this.state);
-    }
     render() {
         return (
             <div>
-<TestModal showModal={this.state.ModalIsVisible} onCloseModal={()=>{this.handleCloseModal()}} />
+                <TestModal showModal={this.state.ModalIsVisible}/>
                 <Header/>
                 <SearchBar/>
                 <SearchResult/>
@@ -34,7 +23,9 @@ class HomePage extends React.Component {
         );
     }
     componentDidMount() {
-this.props.dispatch(fetchShortcuts());
+        this
+            .props
+            .dispatch(fetchShortcuts());
     }
 }
 

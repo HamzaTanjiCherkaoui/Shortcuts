@@ -4,11 +4,8 @@ import {fetchShortcuts} from '../actions/shortcuts';
 
 import '../styles/components/SearchBar.css';
 class SearchBar extends React.Component{
-    constructor(props){
-        super(props);
-        this.handleSearch = this.handleSearch.bind(this);
-    }
-handleSearch(){
+    
+handleSearch = () => {
     this.props.dispatch(fetchShortcuts({text:'zoom'}));
 }
 render() { return (

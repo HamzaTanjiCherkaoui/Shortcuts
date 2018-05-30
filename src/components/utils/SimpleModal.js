@@ -1,11 +1,7 @@
 import React from 'react';
 import '../../styles/components/utils/Modal.css';
 class SimpleModal extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handleKeyUp = this.handleKeyUp.bind(this);
-        this.handleOutsideClick = this.handleOutsideClick.bind(this);
-    }
+    
     componentDidMount(){
         window.addEventListener('keyup',this.handleKeyUp,false);
         document.addEventListener('click',this.handleOutsideClick,false);
@@ -14,7 +10,7 @@ class SimpleModal extends React.Component {
         window.removeEventListener('keyup', this.handleKeyUp, false);
         document.removeEventListener('click', this.handleOutsideClick, false);
       }
-    handleKeyUp(e) {
+    handleKeyUp = (e) => {
         const {onCloseRequest} = this.props;
         const keys = {
             27: () => {
@@ -27,7 +23,7 @@ class SimpleModal extends React.Component {
           if (keys[e.keyCode]) { keys[e.keyCode](); }
     }
 
-    handleOutsideClick(e) {
+    handleOutsideClick= (e) => {
         const { onCloseRequest } = this.props;
     
         if (this.modal) {
