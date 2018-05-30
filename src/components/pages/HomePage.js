@@ -8,10 +8,25 @@ import Modal from '../utils/ModalLauncher';
 import TestModal from '../testModal';
 class HomePage extends React.Component {
     // <Modal showModal={true}>Hello Modal</Modal>
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            ModalIsVisible: true
+        }
+        this.handleCloseModal = this.handleCloseModal.bind(this);
+    }
+    handleCloseModal() {
+        
+        this.setState(()=>{
+            return {ModalIsVisible:false}
+        })
+        console.log(this.state);
+    }
     render() {
         return (
             <div>
-<TestModal showModal={true} />
+<TestModal showModal={this.state.ModalIsVisible} onCloseModal={()=>{this.handleCloseModal()}} />
                 <Header/>
                 <SearchBar/>
                 <SearchResult/>
