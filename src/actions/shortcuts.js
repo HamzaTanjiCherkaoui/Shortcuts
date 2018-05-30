@@ -1,12 +1,8 @@
-export const setShortcuts = ({query} = {}) => ({
+import {fetchShortcuts} from '../services/shortcutsService';
+
+ const setShortcuts = ({query} = {query:{sort:'trending'}}) => ({
     type: 'SET_SHORTCUTS',
-    shortcuts: [
-        {
-            id: 1,
-            buttons: ["Ctrl", "A", "Z"]
-        }, {
-            id: 2,
-            buttons: ["Ctrl", "C"]
-        }
-    ]
+    payload: fetchShortcuts(query)
 });
+
+export { setShortcuts as fetchShortcuts}; 

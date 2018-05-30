@@ -15,6 +15,9 @@
     flex: 0.5;
     
 }
+.Header__Title i {
+    margin-right: 10px;
+}
 .Header__Slogon {
     color: #fff;
     background: #274057;

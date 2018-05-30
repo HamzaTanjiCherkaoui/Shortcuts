@@ -1,10 +1,14 @@
 import React from 'react';
 import '../styles/components/ShortcutItem.css';
+import ShortcutButtons from './ShortcutButtons';
 
-export default() => (
+export default({shortcut}) => (
+    <div>
+    
     <div className="ShortcutItem">
-        <div className="ShortcutItem__Button">Ctrl</div>
-        <div className="ShortcutItem__Separator">+</div>
-        <div className="ShortcutItem__Button">A</div>
+    {shortcut.buttons.map((button,i,buttons)=>(
+        <ShortcutButtons button={button} isLast={(buttons.length)!==i+1} key={i} />   
+    ))}    
+    </div>
     </div>
 )

@@ -1,7 +1,17 @@
 import React from 'react';
-import '../styles/components/SearchBar.css';
+import {connect} from 'react-redux';
+import {fetchShortcuts} from '../actions/shortcuts';
 
-export default() => (
+import '../styles/components/SearchBar.css';
+class SearchBar extends React.Component{
+    constructor(props){
+        super(props);
+        this.handleSearch = this.handleSearch.bind(this);
+    }
+handleSearch(){
+    this.props.dispatch(fetchShortcuts({text:'zoom'}));
+}
+render() { return (
     <div className="SearchBar">
         <input type="text" placeholder="Search for shorcuts (ex: Zoom-in , Zoom-out) " className="SearchBar__SearchInput"/>
         <select className="small-margin-left">
@@ -12,7 +22,9 @@ export default() => (
                 Illustrator
             </option>
         </select>
-
-        <button className="small-margin-left SearchBar__Button">Search</button>
+        <button className="small-margin-left SearchBar__Button" onClick={this.handleSearch}>Search</button>
     </div>
 )
+}
+}
+export default connect()(SearchBar);

@@ -1,0 +1,49 @@
+[
+    {
+        "id": 1,
+        "buttons": ["Ctrl", "A", "Z"]
+    }, {
+        "id": 2,
+        "buttons": ["Ctrl", "C"]
+    },
+    {
+        "id": 3,
+        "buttons": ["Ctrl", "C3"]
+    },
+    {
+        "id": 4,
+        "buttons": ["Ctrl", "C4"]
+    },
+    {
+        "id": 5,
+        "buttons": ["Ctrl", "C5"]
+    },
+    {
+        "id": 6,
+        "buttons": ["Ctrl", "C6"]
+    },
+    {
+        "id": 7,
+        "buttons": ["Ctrl", "C7"]
+    },
+    {
+        "id": 8,
+        "buttons": ["Ctrl", "C8"]
+    },
+    {
+        "id": 9,
+        "buttons": ["Ctrl", "C9"]
+    },
+    {
+        "id": 10,
+        "buttons": ["Ctrl", "C10"]
+    },
+    {
+        "id": 11,
+        "buttons": ["Ctrl", "C11"]
+    },
+    {
+        "id": 12,
+        "buttons": ["Ctrl", "C12"]
+    }
+]
