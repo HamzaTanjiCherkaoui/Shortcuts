@@ -1,7 +1,7 @@
 import React  from 'react';
 import Modal from './SimpleModal';
 
-export default function Hoc(WrappedComponent) {
+export default (WrappedComponent) => {
     return class extends React.Component {
         state = {
             showModal: this.props.showModal
