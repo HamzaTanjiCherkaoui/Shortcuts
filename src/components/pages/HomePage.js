@@ -5,13 +5,13 @@ import Header from '../Header';
 import SearchBar from '../SearchBar';
 import SearchResult from '../SearchResult';
 import Modal from '../utils/ModalLauncher';
-
+import TestModal from '../testModal';
 class HomePage extends React.Component {
-
+    // <Modal showModal={true}>Hello Modal</Modal>
     render() {
         return (
             <div>
-            <Modal showModal={true}>Hello Modal</Modal>
+<TestModal showModal={true} />
                 <Header/>
                 <SearchBar/>
                 <SearchResult/>
