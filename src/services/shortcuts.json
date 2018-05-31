@@ -3,71 +3,71 @@
         "id": 1,
         "buttons": ["Ctrl", "A", "Z"],
         "description" :"lorem ipsum dollor",
-        "label" : "Zoom Out"
+        "label" : "Zoom Out 1"
     }, {
         "id": 2,
         "buttons": ["Ctrl", "C"],
         "description" :"lorem ipsum dollor",
-        "label" : "Zoom Out"
+        "label" : "Zoom Out 2"
     },
     {
         "id": 3,
         "buttons": ["Ctrl", "C3"],
         "description" :"lorem ipsum dollor",
-        "label" : "Zoom Out"
+        "label" : "Zoom Out 3"
     },
     {
         "id": 4,
         "buttons": ["Ctrl", "C4"],
         "description" :"lorem ipsum dollor",
-        "label" : "Zoom Out"
+        "label" : "Zoom Out 4"
     },
     {
         "id": 5,
         "buttons": ["Ctrl", "C5"],
         "description" :"lorem ipsum dollor",
-        "label" : "Zoom Out"
+        "label" : "Zoom Out 5"
     },
     {
         "id": 6,
         "buttons": ["Ctrl", "C6"],
         "description" :"lorem ipsum dollor",
-        "label" : "Zoom Out"
+        "label" : "Zoom Out 6"
     },
     {
         "id": 7,
         "buttons": ["Ctrl", "C7"],
         "description" :"lorem ipsum dollor",
-        "label" : "Zoom Out"
+        "label" : "Zoom Out 7"
     },
     {
         "id": 8,
         "buttons": ["Ctrl", "C8"],
         "description" :"lorem ipsum dollor",
-        "label" : "Zoom Out"
+        "label" : "Zoom Out 8"
     },
     {
         "id": 9,
         "buttons": ["Ctrl", "C9"],
         "description" :"lorem ipsum dollor",
-        "label" : "Zoom Out"
+        "label" : "Zoom Out 9"
     },
     {
         "id": 10,
         "buttons": ["Ctrl", "C10"],
         "description" :"lorem ipsum dollor",
-        "label" : "Zoom Out"
+        "label" : "Zoom Out 10"
     },
     {
         "id": 11,
         "buttons": ["Ctrl", "C11"],
         "description" :"lorem ipsum dollor",
-        "label" : "Zoom Out"
+        "label" : "Zoom Out 11"
     },
     {
         "id": 12,
         "buttons": ["Ctrl", "C12"],
         "description" :"lorem ipsum dollor",
-        "label" : "Zoom Out"
+        "label" : "Zoom Out 12"
     }
 ]

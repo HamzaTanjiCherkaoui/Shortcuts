@@ -10,5 +10,9 @@ const getShortcut = (id) => ({
     payload : fetchShortcut(id)
 });
 
+const unselectShortcut = (id) => ({
+    type : 'UNSELECT_SELECTED_SHORTCUT'
+});
 
-export { setShortcuts as fetchShortcuts , getShortcut }; 
+
+export { setShortcuts as fetchShortcuts , getShortcut , unselectShortcut}; 
