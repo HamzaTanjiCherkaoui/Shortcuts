@@ -1,4 +1,4 @@
-const shortcutsReducerDefaultState = {shortcuts : [], fetching : false, fetched : false, failed : false}
+const shortcutsReducerDefaultState = {shortcuts : [], fetching : false, fetched : false, failed : false , selectedShortcut : {} , loadingSelectedShortcut : false }
 
 const shortcutsReducer = (state = shortcutsReducerDefaultState, action) => {
     switch (action.type) {
@@ -27,7 +27,18 @@ const shortcutsReducer = (state = shortcutsReducerDefaultState, action) => {
                 fetched: false,
                 failed: true
             };
-
+         case 'GET_SHORTCUT_PENDING':
+           return {
+                ...state, 
+                loadingSelectedShortcut : true
+           }
+        case 'GET_SHORTCUT_FULFILLED':
+        return {
+            ...state, 
+            loadingSelectedShortcut : false,
+            selectedShortcut : action.payload
+        }
+        
         default:
             return state;
     }

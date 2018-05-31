@@ -22,7 +22,7 @@ export const getShortcut = (id) => {
             if (simulateError) {
                 reject('Failed to fetch list of shortcut ');
             } else {
-                resolve(shortcuts.find((s)=> s.id == id));
+                resolve(shortcuts.find((s)=> s.id === id));
             }
         }, 2000);
     });

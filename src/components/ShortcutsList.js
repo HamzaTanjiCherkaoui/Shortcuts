@@ -1,7 +1,10 @@
 import React from 'react';
+import {connect} from 'react-redux';
+
 import ShortcutItem from './ShortcutItem';
 import '../styles/components/ShortcutsList.css';
 import ShortcutModal from './ShortcutModal';
+import {getShortcut} from '../actions/shortcuts';
 
 class ShortcutList extends React.Component{
     state = {
@@ -10,11 +13,11 @@ class ShortcutList extends React.Component{
     }
 
     showShortcutModal = (id) => {
-
+        this.props.dispatch(getShortcut(id));
         this.setState((prevState)=>{
             return {
                 modalIsVisible: true,
-                shortcut : this.props.shortcuts[id]
+                
             
             }
         })
@@ -29,4 +32,4 @@ class ShortcutList extends React.Component{
     ) }
 }
 
-export default ShortcutList;
+export default connect()(ShortcutList);

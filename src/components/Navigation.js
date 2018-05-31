@@ -9,10 +9,10 @@ export default() => (
         </nav>
         <nav className="Navbar__Items Navbar__Items--right">
             <div className="Navbar__Link ">
-                <a href="#">About</a>
+                <a href="">About</a>
             </div>
             <div className="Navbar__Link ">
-                <a href="#">Sign In</a>
+                <a href="">Sign In</a>
             </div>
             <div className=" Button">
                 Sign Up

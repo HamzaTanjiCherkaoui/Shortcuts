@@ -1,4 +1,4 @@
-import {fetchShortcuts,getShortcut} from '../services/shortcutsService';
+import {fetchShortcuts,getShortcut as fetchShortcut} from '../services/shortcutsService';
 
  const setShortcuts = ({query} = {query:{sort:'trending'}}) => ({
     type: 'SET_SHORTCUTS',
@@ -7,7 +7,7 @@ import {fetchShortcuts,getShortcut} from '../services/shortcutsService';
 
 const getShortcut = (id) => ({
     type : 'GET_SHORTCUT',
-    payload : getShortcut(id);
+    payload : fetchShortcut(id)
 });
 
 
