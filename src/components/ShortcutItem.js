@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 import '../styles/components/ShortcutItem.css';
 import ShortcutButtons from './ShortcutButtons';
 
-
 class ShortcutItem extends React.Component {
     render() {
         const {shortcut} = this.props ;

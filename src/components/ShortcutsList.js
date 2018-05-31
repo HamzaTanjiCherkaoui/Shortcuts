@@ -16,9 +16,7 @@ class ShortcutList extends React.Component{
         this.props.dispatch(getShortcut(id));
         this.setState((prevState)=>{
             return {
-                modalIsVisible: true,
-                
-            
+                modalIsVisible: true,   
             }
         })
     }
