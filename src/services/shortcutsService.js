@@ -14,3 +14,16 @@ export const fetchShortcuts = (query) => {
         }, 2000);
     });
 };
+
+export const getShortcut = (id) => {
+    return new Promise((resolve, reject) => {
+        // simulate lengthy service call
+        setTimeout(() => {
+            if (simulateError) {
+                reject('Failed to fetch list of shortcut ');
+            } else {
+                resolve(shortcuts.find((s)=> s.id == id));
+            }
+        }, 2000);
+    });
+};

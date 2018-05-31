@@ -10,7 +10,7 @@ class ShortcutList extends React.Component{
     }
 
     showShortcutModal = (id) => {
-        console.log("showing modal ",id);
+
         this.setState((prevState)=>{
             return {
                 modalIsVisible: true,
