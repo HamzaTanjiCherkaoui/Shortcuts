@@ -5,4 +5,4 @@ import {fetchShortcuts} from '../services/shortcutsService';
     payload: fetchShortcuts(query)
 });
 
-export { setShortcuts as fetchShortcuts}; 
+export { setShortcuts as fetchShortcuts }; 

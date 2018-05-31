@@ -1,49 +1,73 @@
 [
     {
         "id": 1,
-        "buttons": ["Ctrl", "A", "Z"]
+        "buttons": ["Ctrl", "A", "Z"],
+        "description" :"lorem ipsum dollor",
+        "label" : "Zoom Out"
     }, {
         "id": 2,
-        "buttons": ["Ctrl", "C"]
+        "buttons": ["Ctrl", "C"],
+        "description" :"lorem ipsum dollor",
+        "label" : "Zoom Out"
     },
     {
         "id": 3,
-        "buttons": ["Ctrl", "C3"]
+        "buttons": ["Ctrl", "C3"],
+        "description" :"lorem ipsum dollor",
+        "label" : "Zoom Out"
     },
     {
         "id": 4,
-        "buttons": ["Ctrl", "C4"]
+        "buttons": ["Ctrl", "C4"],
+        "description" :"lorem ipsum dollor",
+        "label" : "Zoom Out"
     },
     {
         "id": 5,
-        "buttons": ["Ctrl", "C5"]
+        "buttons": ["Ctrl", "C5"],
+        "description" :"lorem ipsum dollor",
+        "label" : "Zoom Out"
     },
     {
         "id": 6,
-        "buttons": ["Ctrl", "C6"]
+        "buttons": ["Ctrl", "C6"],
+        "description" :"lorem ipsum dollor",
+        "label" : "Zoom Out"
     },
     {
         "id": 7,
-        "buttons": ["Ctrl", "C7"]
+        "buttons": ["Ctrl", "C7"],
+        "description" :"lorem ipsum dollor",
+        "label" : "Zoom Out"
     },
     {
         "id": 8,
-        "buttons": ["Ctrl", "C8"]
+        "buttons": ["Ctrl", "C8"],
+        "description" :"lorem ipsum dollor",
+        "label" : "Zoom Out"
     },
     {
         "id": 9,
-        "buttons": ["Ctrl", "C9"]
+        "buttons": ["Ctrl", "C9"],
+        "description" :"lorem ipsum dollor",
+        "label" : "Zoom Out"
     },
     {
         "id": 10,
-        "buttons": ["Ctrl", "C10"]
+        "buttons": ["Ctrl", "C10"],
+        "description" :"lorem ipsum dollor",
+        "label" : "Zoom Out"
     },
     {
         "id": 11,
-        "buttons": ["Ctrl", "C11"]
+        "buttons": ["Ctrl", "C11"],
+        "description" :"lorem ipsum dollor",
+        "label" : "Zoom Out"
     },
     {
         "id": 12,
-        "buttons": ["Ctrl", "C12"]
+        "buttons": ["Ctrl", "C12"],
+        "description" :"lorem ipsum dollor",
+        "label" : "Zoom Out"
     }
 ]

@@ -22,6 +22,8 @@ height: 40px;
 line-height: 40px; 
 text-align: center;
 vertical-align: middle;
+color: rgb(194, 193, 193);
+font-weight: 800;
 
 }
 
@@ -47,4 +49,6 @@ display: flex;
 flex: 1 1 1;
 justify-content: center;
 flex-wrap: nowrap;
+
+color : #357edd;
 }

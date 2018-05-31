@@ -7,11 +7,13 @@ export default (WrappedComponent) => {
             showModal: this.props.showModal
         }
          hideModal = () => {
+             
             this.setState(() => {
                 return {showModal: false}
             })
         }
         componentWillReceiveProps=(nextProps)=>  {
+            console.log(nextProps);
             this.setState(() => {
                 return {showModal: nextProps.showModal}
             })
@@ -20,7 +22,7 @@ export default (WrappedComponent) => {
             
             return (
                 <div>
-                    {(this.state.showModal) && <Modal onCloseRequest={this.hideModal}><WrappedComponent hideModal={this.hideModal} /></Modal>
+                    {(this.state.showModal) && <Modal onCloseRequest={this.hideModal}><WrappedComponent hideModal={this.hideModal} {...this.props} /></Modal>
 }</div>
             );
         }

@@ -1,15 +1,15 @@
 import React from 'react';
+import {connect} from 'react-redux';
+
 import '../styles/components/ShortcutItem.css';
 import ShortcutButtons from './ShortcutButtons';
 
+
 class ShortcutItem extends React.Component {
-    handleShortcutItemClick = (id) => {
-        console.log("displaying shortcut",id);
-    }
     render() {
         const {shortcut} = this.props ;
         return(
-            <div className="ShortcutItem" onClick={()=>(this.handleShortcutItemClick(shortcut.id))}>
+            <div className="ShortcutItem" onClick={()=>(this.props.handleShortcutItemClick(shortcut.id))}>
             {shortcut.buttons.map((button,i,buttons)=>(
                 <ShortcutButtons button={button} isLast={(buttons.length)!==i+1} key={i} />   
             ))}    
@@ -17,4 +17,4 @@ class ShortcutItem extends React.Component {
         )
     }
 }
-export default ShortcutItem; 
+export default connect()(ShortcutItem); 

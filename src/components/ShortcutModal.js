@@ -5,8 +5,11 @@ import isModal from './utils/HOCModal';
 class ShortcutModal extends Component {
     
     render () {
+        const {label,description} = this.props.shortcut;
         return (<div>
-             <p>This is the shortcut modal </p> 
+             <h2> {label}</h2> 
+             
+             <p>{description}</p>
              <button onClick={this.props.hideModal} >Got it </button> 
              </div>)
     }
