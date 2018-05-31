@@ -12,14 +12,12 @@ const store = configureStore();
 
 const jsx = (
     <div>
-    
-    <div className="container">
-    <Provider store={store}>
-        <AppRouter/>
-        </Provider>
+        <div className="container">
+            <Provider store={store}>
+                <AppRouter/>
+            </Provider>
+        </div>
     </div>
-    </div>
-
 );
 
 ReactDOM.render(jsx, document.getElementById('root'));
