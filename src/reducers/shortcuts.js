@@ -1,4 +1,4 @@
-const shortcutsReducerDefaultState = {shortcuts : [], fetching : false, fetched : false, failed : false , selectedShortcut : {} , loadingSelectedShortcut : false }
+const shortcutsReducerDefaultState = {shortcuts : [], fetching : false, fetched : false, failed : false , selectedShortcut : {} , loadingSelectedShortcut : false , }
 
 const shortcutsReducer = (state = shortcutsReducerDefaultState, action) => {
     
@@ -44,7 +44,12 @@ const shortcutsReducer = (state = shortcutsReducerDefaultState, action) => {
             ...state,
             loadingSelectedShortcut : false,
             selectedShortcut : {}
-        }   
+        } 
+        case 'SHOW_SIGNIN_MODAL': 
+        return {
+            ...state,
+            showSignInModal : true
+        }
         default:
             return state;
     }

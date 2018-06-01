@@ -19,6 +19,7 @@
   .Navbar__Link a {
       text-decoration: none;
       color: inherit;
+      cursor: pointer;
   }
   .Navbar__Items--right {
     justify-content: flex-end;

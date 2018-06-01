@@ -9,7 +9,6 @@ import {getShortcut} from '../actions/shortcuts';
 class ShortcutList extends React.Component{
     state = {
         modalIsVisible: false,
-        shortcut : undefined
     }
 
     showShortcutModal = (id) => {
@@ -24,7 +23,7 @@ class ShortcutList extends React.Component{
     render() {
         return  (
         <div className="ShortcutsList">
-        <ShortcutModal showModal={this.state.modalIsVisible} shortcut={this.state.shortcut} />
+        <ShortcutModal showModal={this.state.modalIsVisible}/>
             {this.props.shortcuts.map(shortcut=>(<ShortcutItem shortcut={shortcut} key={shortcut.id} handleShortcutItemClick={this.showShortcutModal}/>))}        
         </div>
     ) }

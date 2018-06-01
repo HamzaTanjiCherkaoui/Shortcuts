@@ -14,5 +14,9 @@ const unselectShortcut = (id) => ({
     type : 'UNSELECT_SELECTED_SHORTCUT'
 });
 
+const showSignInModal = (id) => ({
+    type : 'SHOW_SIGNIN_MODAL'
+});
 
-export { setShortcuts as fetchShortcuts , getShortcut , unselectShortcut}; 
+
+export { setShortcuts as fetchShortcuts , getShortcut , unselectShortcut , showSignInModal}; 
