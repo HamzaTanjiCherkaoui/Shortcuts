@@ -1,6 +1,6 @@
 const log = ({ dispatch, getState }) => (next) => (action) => {
     
-    console.log("YEY API");
+    console.log(action);
     next(action);
 
 }

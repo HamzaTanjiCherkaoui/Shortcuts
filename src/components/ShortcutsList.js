@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 
 import ShortcutItem from './ShortcutItem';
 import '../styles/components/ShortcutsList.css';
-import ShortcutModal from './ShortcutModal';
+// import ShortcutModal from './ShortcutModal';
 import {getShortcut} from '../actions/shortcuts';
 
 class ShortcutList extends React.Component{
@@ -23,10 +23,11 @@ class ShortcutList extends React.Component{
     render() {
         return  (
         <div className="ShortcutsList">
-        <ShortcutModal showModal={this.state.modalIsVisible}/>
+       
             {this.props.shortcuts.map(shortcut=>(<ShortcutItem shortcut={shortcut} key={shortcut.id} handleShortcutItemClick={this.showShortcutModal}/>))}        
         </div>
     ) }
 }
 
 export default connect()(ShortcutList);
+// <ShortcutModal showModal={this.state.modalIsVisible}/>

@@ -2,12 +2,12 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import '../styles/components/Navigation.css';
-import {showSignInModal} from '../actions/shortcuts';
+import {showModal} from '../actions/ui';
 
 @connect()
 class Navigation extends React.Component {
     showSignInModal = () => {
-        this.props.dispatch(showSignInModal());
+        this.props.dispatch(showModal('SIGNIN'));
     }
     render() {
         return (

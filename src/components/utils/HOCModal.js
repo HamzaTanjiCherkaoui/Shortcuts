@@ -1,7 +1,10 @@
 import React  from 'react';
 import Modal from './SimpleModal';
+import {connect} from 'react-redux';
+import {hideModal} from '../../actions/ui';
 
-export default (WrappedComponent) => {
+@connect()
+export default (modalName)=>(WrappedComponent) => {
     return class extends React.Component {
         state = {
             showModal: this.props.showModal
@@ -11,6 +14,7 @@ export default (WrappedComponent) => {
             this.setState(() => {
                 return {showModal: false}
             })
+            this.props.dispatch(hideModal(modalName));
         }
         componentWillReceiveProps=(nextProps)=>  {
             this.setState(() => {

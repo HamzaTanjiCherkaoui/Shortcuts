@@ -13,6 +13,8 @@
     color:  #fff;
     text-align: center;
     flex: 0.5;
+    font-weight: 800;
+    font-size: 30px;
     
 }
 .Header__Title i {

@@ -1,9 +1,39 @@
-@import url('https://fonts.googleapis.com/css?family=Palanquin+Dark');
+/* @import url('https://fonts.googleapis.com/css?family=Palanquin+Dark'); */
+@font-face {
+  font-family: MontserratLight;
+  src:url("./styles/fonts/Montserrat-Light.otf");
+  font-style: normal;
+  font-weight: 100;
+}
+@font-face {
+  font-family: Montserrat, sans-serif;
+  src:url("./styles/fonts/Montserrat-Regular.otf");
+  font-style: normal;
+  font-weight: 100;
+} 
+@font-face {
+  font-family: Montserrat, sans-serif;
+  src:url("./styles/fonts/Montserrat-Bold.otf");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+font-family: Raleway;
+src:url("./styles/fonts/Raleway-Regular.otf");
+font-style: normal;
+font-weight: 100;
+}
+@font-face {
+font-family: Raleway;
+src:url("./styles/fonts/Raleway-Bold.otf");
+font-style: normal;
+font-weight: 700;
+}
 
 body{
   background: #f1f4f5;
   color: #274057;
-  font-family: 'Palanquin Dark', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 .container {
   width: 1200px;

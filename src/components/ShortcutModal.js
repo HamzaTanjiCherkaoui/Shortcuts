@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import isModal from './utils/HOCModal';
 import {connect} from 'react-redux';
-@isModal
+@isModal('SHORTCUT')
 class ShortcutModal extends Component {
     
     render () {
