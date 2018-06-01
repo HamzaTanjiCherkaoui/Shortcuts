@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import isModal from './utils/HOCModal';
 import {connect} from 'react-redux';
+
 @isModal('SHORTCUT')
 class ShortcutModal extends Component {
     
@@ -18,7 +19,6 @@ class ShortcutModal extends Component {
 }
 
 const mapStateToProps = (state) => {
-    
     
     return {
         shortcut : state.shortcutsState.selectedShortcut , 

@@ -5,7 +5,7 @@ import {hideModal} from '../../actions/ui';
 
 export default (modalName)=>(WrappedComponent) => {
     
-      class HOC extends React.Component {
+      class HOCModal extends React.Component {
         state = {
             showModal: this.props.showModal
         }
@@ -31,9 +31,7 @@ export default (modalName)=>(WrappedComponent) => {
                 </div>
             );
         }
-   
          static mapStateToProps = (state) => {
-    
             if(state.ui.displayModal.find(modal => modal.name === modalName) === undefined) {
                 return { showModal : false}
             }
@@ -42,5 +40,5 @@ export default (modalName)=>(WrappedComponent) => {
              }
         }
     }
-    return connect(HOC.mapStateToProps)(HOC);
+    return connect(HOCModal.mapStateToProps)(HOCModal);
 }
