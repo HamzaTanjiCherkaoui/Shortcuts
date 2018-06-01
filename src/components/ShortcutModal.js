@@ -5,7 +5,6 @@ import {connect} from 'react-redux';
 class ShortcutModal extends Component {
     
     render () {
-        
         return ( <div>
             {this.props.loading && <h3>loading</h3>}
             {!this.props.loading && 
@@ -19,9 +18,11 @@ class ShortcutModal extends Component {
 }
 
 const mapStateToProps = (state) => {
+    
+    
     return {
         shortcut : state.shortcutsState.selectedShortcut , 
-        loading : state.shortcutsState.loadingSelectedShortcut
+        loading : state.shortcutsState.loadingSelectedShortcut,
      }
 }
 export default connect(mapStateToProps)(ShortcutModal);

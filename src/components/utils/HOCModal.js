@@ -3,9 +3,9 @@ import Modal from './SimpleModal';
 import {connect} from 'react-redux';
 import {hideModal} from '../../actions/ui';
 
-@connect()
 export default (modalName)=>(WrappedComponent) => {
-    return class extends React.Component {
+    
+      class HOC extends React.Component {
         state = {
             showModal: this.props.showModal
         }
@@ -31,5 +31,16 @@ export default (modalName)=>(WrappedComponent) => {
                 </div>
             );
         }
+   
+         static mapStateToProps = (state) => {
+    
+            if(state.ui.displayModal.find(modal => modal.name === modalName) === undefined) {
+                return { showModal : false}
+            }
+            return {
+                showModal : state.ui.displayModal.find(modal => modal.name === modalName).show , 
+             }
+        }
     }
+    return connect(HOC.mapStateToProps)(HOC);
 }

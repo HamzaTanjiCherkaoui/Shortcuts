@@ -3,31 +3,24 @@ import {connect} from 'react-redux';
 
 import ShortcutItem from './ShortcutItem';
 import '../styles/components/ShortcutsList.css';
-// import ShortcutModal from './ShortcutModal';
+import ShortcutModal from './ShortcutModal';
 import {getShortcut} from '../actions/shortcuts';
+import {showModal} from '../actions/ui';
 
 class ShortcutList extends React.Component{
-    state = {
-        modalIsVisible: false,
-    }
 
     showShortcutModal = (id) => {
         this.props.dispatch(getShortcut(id));
-        this.setState((prevState)=>{
-            return {
-                modalIsVisible: true,   
-            }
-        })
+        this.props.dispatch(showModal('SHORTCUT'));
     }
     
     render() {
         return  (
         <div className="ShortcutsList">
-       
+        <ShortcutModal />
             {this.props.shortcuts.map(shortcut=>(<ShortcutItem shortcut={shortcut} key={shortcut.id} handleShortcutItemClick={this.showShortcutModal}/>))}        
         </div>
     ) }
 }
 
 export default connect()(ShortcutList);
-// <ShortcutModal showModal={this.state.modalIsVisible}/>
