@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 
 import ShortcutItem from './ShortcutItem';
 import '../styles/components/ShortcutsList.css';
-import ShortcutModal from './ShortcutModal';
+import ShortcutModal from './modals/ShortcutModal';
 import {getShortcut} from '../actions/shortcuts';
 import {showModal} from '../actions/ui';
 

@@ -1,0 +1,22 @@
+
+.ShortcutModalContent {
+    display: flex;
+    justify-content: flex-start;
+    
+}
+.shortcutDetails {
+    width: 40%;
+}
+.shortcutOverview {
+    width: 60%;
+}
+.shortcutOverview img {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+.ShortcutModalButton {
+    position: relative;
+    float: right;
+    
+}

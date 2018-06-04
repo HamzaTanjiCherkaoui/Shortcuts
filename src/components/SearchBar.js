@@ -25,6 +25,7 @@ class SearchBar extends React.Component {
                 <button
                     className=" SearchBar__Button"
                     onClick={this.handleSearch}>Search</button>
+                <button>Mac / Win </button>
             </div>
         )
     }

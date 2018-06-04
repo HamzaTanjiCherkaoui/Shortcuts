@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import isModal from './utils/HOCModal';
+import isModal from '../utils/HOCModal';
 
-import '../styles/components/SignInModal.css';
+import '../../styles/components/SignInModal.css';
 
 @isModal('SIGNIN') 
 class SignInModal extends Component {

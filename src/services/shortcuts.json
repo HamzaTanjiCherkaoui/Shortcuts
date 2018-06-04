@@ -3,71 +3,83 @@
         "id": 1,
         "buttons": ["Ctrl", "A", "Z"],
         "description" :"lorem ipsum dollor",
-        "label" : "Zoom Out 1"
+        "label" : "Zoom Out 1",
+        "gif" : "shortcut.gif"
     }, {
         "id": 2,
         "buttons": ["Ctrl", "C"],
         "description" :"lorem ipsum dollor",
-        "label" : "Zoom Out 2"
+        "label" : "Zoom Out 2",
+        "gif" : "shortcut.gif"
     },
     {
         "id": 3,
         "buttons": ["Ctrl", "C3"],
         "description" :"lorem ipsum dollor",
-        "label" : "Zoom Out 3"
+        "label" : "Zoom Out 3",
+        "gif" : "shortcut.gif"
     },
     {
         "id": 4,
         "buttons": ["Ctrl", "C4"],
         "description" :"lorem ipsum dollor",
-        "label" : "Zoom Out 4"
+        "label" : "Zoom Out 4",
+        "gif" : "shortcut.gif"
     },
     {
         "id": 5,
         "buttons": ["Ctrl", "C5"],
         "description" :"lorem ipsum dollor",
-        "label" : "Zoom Out 5"
+        "label" : "Zoom Out 5",
+        "gif" : "shortcut.gif"
     },
     {
         "id": 6,
         "buttons": ["Ctrl", "C6"],
         "description" :"lorem ipsum dollor",
-        "label" : "Zoom Out 6"
+        "label" : "Zoom Out 6",
+        "gif" : "shortcut.gif"
     },
     {
         "id": 7,
         "buttons": ["Ctrl", "C7"],
         "description" :"lorem ipsum dollor",
-        "label" : "Zoom Out 7"
+        "label" : "Zoom Out 7",
+        "gif" : "shortcut.gif"
     },
     {
         "id": 8,
         "buttons": ["Ctrl", "C8"],
         "description" :"lorem ipsum dollor",
-        "label" : "Zoom Out 8"
+        "label" : "Zoom Out 8",
+        "gif" : "shortcut.gif"
     },
     {
         "id": 9,
         "buttons": ["Ctrl", "C9"],
         "description" :"lorem ipsum dollor",
-        "label" : "Zoom Out 9"
+        "label" : "Zoom Out 9",
+        "gif" : "shortcut.gif"
     },
     {
         "id": 10,
         "buttons": ["Ctrl", "C10"],
         "description" :"lorem ipsum dollor",
-        "label" : "Zoom Out 10"
+        "label" : "Zoom Out 10",
+        "gif" : "shortcut.gif"
     },
     {
         "id": 11,
         "buttons": ["Ctrl", "C11"],
         "description" :"lorem ipsum dollor",
-        "label" : "Zoom Out 11"
+        "label" : "Zoom Out 11",
+        "gif" : "shortcut.gif"
     },
     {
         "id": 12,
         "buttons": ["Ctrl", "C12"],
         "description" :"lorem ipsum dollor",
-        "label" : "Zoom Out 12"
+        "label" : "Zoom Out 12",
+        "gif" : "shortcut.gif"
     }
 ]

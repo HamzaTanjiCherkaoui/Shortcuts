@@ -38,10 +38,11 @@ class SimpleModal extends React.Component {
         const {children,onCloseRequest} = this.props;
        return ( <div className="modal__overlay">
             <div className="modal" ref={node => (this.modal=node)}>
+            <button className="modal__closeButton" onClick={onCloseRequest}>X</button>
             <div className="modal__content">
                 {children}
             </div>
-            <button className="modal__closeButton" onClick={onCloseRequest}>X</button>
+            
             </div>
         </div>)
     }

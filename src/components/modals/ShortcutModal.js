@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import isModal from './utils/HOCModal';
+import isModal from '../utils/HOCModal';
 import {connect} from 'react-redux';
+
+import '../../styles/components/ShortcutModal.css';
 
 @isModal('SHORTCUT')
 class ShortcutModal extends Component {
@@ -10,11 +12,21 @@ class ShortcutModal extends Component {
         return ( <div>
             {loading && <h3>loading</h3>}
             {!loading && 
-            <div>
+                <div>
+            <div className="ShortcutModalContent">
+                <div className="shortcutDetails">
                 <h2> {label}</h2> 
                 <p>{description}</p>
-                <button onClick={hideModal} >Got it </button> 
-            </div>}
+                </div>
+                <div className="shortcutOverview">
+                <img src="./images/shortcut.png" alt="shortcut overview" />
+                </div>
+
+                
+            </div>
+            <button onClick={hideModal} className="ShortcutModalButton">Gotcha </button>
+        </div> }
+
              </div>)
     }
 }
