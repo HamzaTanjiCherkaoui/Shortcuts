@@ -4,7 +4,7 @@ import isModal from '../utils/HOCModal';
 import '../../styles/components/ShortcutCreator.css';
 
 @isModal('SHORTCUT_CREATOR') 
-class SignInModal extends Component {
+class ShortcutCreator extends Component {
     state ={shortcutButtons : []} ;
     componentDidMount(){
         window.addEventListener('keyup',this.handleKeyUp,false);
@@ -41,10 +41,12 @@ class SignInModal extends Component {
         return ( 
             <div className="shortcutCreator">
             <h3> Create Yout Shortcut :  </h3>
-            <p><i>Type your shortcut buttons  one at the time </i></p>
+            <p><i>Type your shortcut in one time </i></p>
             <div className="creatorArea">
+            <div class="creatorButtons">
             {this.state.shortcutButtons.map(button=>(<div className="shortcutButton" key={button}>{button}</div>))}
             </div> 
+            </div>
             <div className="buttons">
             <button onClick={()=>{}} className="resetButton"> Reset </button>
             <button onClick={this.props.hideModal} className="creatorButton"> Create </button>
@@ -54,4 +56,4 @@ class SignInModal extends Component {
     }
 }
 
-export default SignInModal;
+export default ShortcutCreator;
