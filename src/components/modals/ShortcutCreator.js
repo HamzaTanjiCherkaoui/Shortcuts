@@ -13,18 +13,7 @@ class ShortcutCreator extends Component {
     componentWillUnmount() {
         window.removeEventListener('keyup', this.handleKeyUp, false);
       }
-    reverse(){
-        let array = this;
-        array.forEach((item,i)=>{
-            if(i<(Math.floor(array.length-1)/2)) 
-            {let temp = array[i];
-            array[i] = array[array.length-i-1];
-            array[array.length-i-1]=temp;
-            console.log(array);
-            }
-            
-        })
-    }
+
     handleKeyUp = (e) => {
         e.preventDefault();
         this.setState((prevState)=>{
