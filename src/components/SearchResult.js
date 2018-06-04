@@ -14,9 +14,20 @@ class SearchResult extends React.Component {
         const {shortcuts, fetching, fetched} = this.props;
         return (
             <div className="SearchResult">
-                {fetching && <p>
-                    loading ...
-                </p>}
+                {fetching && 
+                    
+              <div className="loading-placeholder">
+              <div className="animated-background shortcutLoader"></div>
+              <div className="animated-background shortcutLoader"></div>
+              <div className="animated-background shortcutLoader"></div>
+              <div className="animated-background shortcutLoader"></div>
+              <div className="animated-background shortcutLoader"></div>
+              <div className="animated-background shortcutLoader"></div>
+              <div className="animated-background shortcutLoader"></div>
+              <div className="animated-background shortcutLoader"></div>
+              </div>
+              
+                }
                 {fetched && <ShortcutsList shortcuts={shortcuts}/>}
             </div>
         )

@@ -1,0 +1,46 @@
+.creatorArea{
+display: flex;
+justify-content: center;
+align-content: center;
+align-items: center;
+padding: 40px;
+height: 100px;
+background: #fafafa;
+border-radius: 5px;
+}
+.shortcutButton {
+margin-left: 10px;
+box-shadow: 0.2rem 0.3rem 1.7rem 0 rgba(0,0,0,.13);
+    height: 40px;
+    
+    line-height: 40px; 
+    border-radius: 5px;
+    text-align: center;
+    vertical-align: middle;
+    /* color :rgba(167, 166, 166, 1); */
+    font-family: 'Ubuntu',sans-serif;
+    font-size: 50px;
+    padding: 10px;
+    
+}
+.shortcutCreator {
+display: flex;
+flex-direction: column;
+
+
+}
+.creatorButton , .resetButton{
+    
+    width: 200px;    
+    margin-top: 20px;
+    color: #fff;
+    background: #357edd;
+    border-radius: 5px;
+    float: right;
+    
+}
+.resetButton {
+background: #eee;
+color: #1d3c66;
+margin-right: 10px;
+}

@@ -10,7 +10,7 @@ export const fetchShortcuts = (query) => {
             } else {
                 resolve(shortcuts);
             }
-        }, 1000);
+        }, 5000);
     });
 };
 

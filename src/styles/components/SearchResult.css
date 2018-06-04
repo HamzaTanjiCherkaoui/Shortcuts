@@ -2,3 +2,47 @@
     padding: 20px;
     min-height: 500px;
 }
+.loading-placeholder {
+    
+    background: #fff;
+     padding: 20px;
+     margin: 0 auto;
+     display: flex;   
+      flex-wrap: wrap;
+     justify-content: center;
+    
+ }
+ @keyframes placeHolderShimmer{
+     0%{
+         background-position: -468px 0
+     }
+     100%{
+         background-position: 468px 0
+     }
+ }
+ 
+ .animated-background {
+     border-radius: 10px;
+     animation-duration: 1s;
+     animation-fill-mode: forwards;
+     animation-iteration-count: infinite;
+     animation-name: placeHolderShimmer;
+     animation-timing-function: linear;
+     background: linear-gradient(to right, #f7f7f7 8%, #e8e8e8 18%, #f7f7f7 33%);
+     background-size: 800px 104px;
+     position: relative;
+ }
+ 
+ .shortcutLoader {
+     height: 30px;
+    padding: 10px;
+    display: flex;
+    width: 200px;
+    flex:1 1 1;
+    margin:10px;
+    margin-bottom:20px;
+    margin-top: 0;
+    border-radius: 5px;
+    justify-content: center;
+    
+  }
