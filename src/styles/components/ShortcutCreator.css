@@ -8,10 +8,6 @@ height: 100px;
 background: #fafafa;
 border-radius: 5px;
 }
-.creatorButtons{
-    display: flex;
-flex-direction: row-reverse;
-}
 .shortcutButton {
 margin-left: 10px;
 box-shadow: 0.2rem 0.3rem 1.7rem 0 rgba(0,0,0,.13);

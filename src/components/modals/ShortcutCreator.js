@@ -16,6 +16,7 @@ class ShortcutCreator extends Component {
 
     handleKeyUp = (e) => {
         e.preventDefault();
+        if(this.state.shortcutButtons.length === 3) return;
         this.setState((prevState)=>{
             return {
                 shortcutButtons : prevState.shortcutButtons.concat((e.key==='Control')?'Ctrl':e.key)
@@ -24,21 +25,17 @@ class ShortcutCreator extends Component {
         
     }
 
-   
-    
     render () {
         return ( 
             <div className="shortcutCreator">
             <h3> Create Yout Shortcut :  </h3>
-            <p><i>Type your shortcut in one time </i></p>
+            <p><i>Type your shortcut buttons one at a  time </i></p>
             <div className="creatorArea">
-            <div class="creatorButtons">
             {this.state.shortcutButtons.map(button=>(<div className="shortcutButton" key={button}>{button}</div>))}
-            </div> 
             </div>
             <div className="buttons">
             <button onClick={()=>{}} className="resetButton"> Reset </button>
-            <button onClick={this.props.hideModal} className="creatorButton"> Create </button>
+            <button onClick={this.props.hideModal} className="creatorButton"> Submit </button>
             </div>
             </div>)
              
