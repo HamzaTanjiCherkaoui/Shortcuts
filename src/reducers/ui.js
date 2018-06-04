@@ -1,16 +1,16 @@
-const uiReducerState = {displayModal: [] }
+const uiReducerState = {displayModal: [{name:"",action:''}] }
 
 const uiReducer = (state = uiReducerState, action) => {
     //TODO handle the undefined handling outiside the component or see how to get ride of it
     if(action.meta === undefined)
     action.meta = {};
     switch (action.type) {
-        case 'SHOW_'+action.meta.name+'_MODAL': 
+        case 'SHOW_MODAL': 
         return {
             ...state,
             displayModal:[{name : action.meta.name , show : true }]
         }
-        case 'HIDE_'+action.meta.name+'_MODAL': 
+        case 'HIDE_MODAL': 
         return {
             ...state,
             displayModal:[{name : action.meta.name , show : false }]

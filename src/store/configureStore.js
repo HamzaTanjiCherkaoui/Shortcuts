@@ -7,7 +7,7 @@ import log from '../middlewares/log';
 
 
 export default() => {
-    const store = createStore(combineReducers({shortcutsState: shortcutsReducer , ui : uiReducer}), applyMiddleware(thunk, promiseMiddleware() , log(false)));
+    const store = createStore(combineReducers({shortcutsState: shortcutsReducer , ui : uiReducer}), applyMiddleware(thunk, promiseMiddleware() , log(true)));
 
     return store;
 };
