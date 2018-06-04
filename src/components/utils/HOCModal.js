@@ -16,9 +16,9 @@ export default (modalName)=>(WrappedComponent) => {
             })
             this.props.dispatch(hideModal(modalName));
         }
-        componentWillReceiveProps=(nextProps)=>  {
+        componentWillReceiveProps=({showModal})=>  {
             this.setState(() => {
-                return {showModal: nextProps.showModal}
+                return {showModal}
             })
         }
         render() {
@@ -32,11 +32,13 @@ export default (modalName)=>(WrappedComponent) => {
             );
         }
          static mapStateToProps = (state) => {
-            if(state.ui.displayModal.find(modal => modal.name === modalName) === undefined) {
+             const {displayModal} = state.ui;
+             
+            if(displayModal.find(modal => modal.name === modalName) === undefined) {
                 return { showModal : false}
             }
             return {
-                showModal : state.ui.displayModal.find(modal => modal.name === modalName).show , 
+                showModal : displayModal.find(modal => modal.name === modalName).show , 
              }
         }
     }

@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import '../styles/components/Navigation.css';
+import SignInModal from './SignInModal';
 import {showModal} from '../actions/ui';
 
 @connect()
@@ -12,6 +13,7 @@ class Navigation extends React.Component {
     render() {
         return (
             <div className="Navbar">
+            <SignInModal/>
                 <nav className="Navbar__Items">
                     <div className="Navbar__Link Navbar__Link-brand">
                     <i className="fas fa-keyboard"></i> ShortCuts.io

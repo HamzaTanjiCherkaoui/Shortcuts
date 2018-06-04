@@ -7,6 +7,7 @@ import ShortcutModal from './ShortcutModal';
 import {getShortcut} from '../actions/shortcuts';
 import {showModal} from '../actions/ui';
 
+@connect()
 class ShortcutList extends React.Component{
 
     showShortcutModal = (id) => {
@@ -23,4 +24,4 @@ class ShortcutList extends React.Component{
     ) }
 }
 
-export default connect()(ShortcutList);
+export default ShortcutList;

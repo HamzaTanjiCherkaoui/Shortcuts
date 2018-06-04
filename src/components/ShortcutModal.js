@@ -6,13 +6,14 @@ import {connect} from 'react-redux';
 class ShortcutModal extends Component {
     
     render () {
+        const {loading , shortcut:{label,description} ,hideModal } = this.props;
         return ( <div>
-            {this.props.loading && <h3>loading</h3>}
-            {!this.props.loading && 
+            {loading && <h3>loading</h3>}
+            {!loading && 
             <div>
-             <h2> {this.props.shortcut.label}</h2> 
-             <p>{this.props.shortcut.description}</p>
-             <button onClick={this.props.hideModal} >Got it </button> 
+                <h2> {label}</h2> 
+                <p>{description}</p>
+                <button onClick={hideModal} >Got it </button> 
             </div>}
              </div>)
     }

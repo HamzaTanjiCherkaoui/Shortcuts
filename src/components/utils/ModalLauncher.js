@@ -2,15 +2,11 @@ import React from 'react';
 import SimpleModal from './SimpleModal';
 
 class ModalLauncher extends React.Component {
-    constructor(props) {
-        super(props);
-        this.hideModal = this.hideModal.bind(this);
-        this.state = {
-            showModal: this.props.showModal || false,
-          };
-    }
+    state = {
+        showModal: this.props.showModal || false,
+      };
     
-    hideModal(){
+    hideModal = ()=> {
         this.setState(()=>({ showModal: false }));
     }
     

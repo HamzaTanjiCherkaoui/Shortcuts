@@ -1,11 +1,11 @@
 
 const showModal = (name) => ({
     type : 'SHOW_MODAL',
-    meta : { name : name }
+    meta : {  name }
 });
 
 const hideModal = (name) => ({
     type : 'HIDE_MODAL',
-    meta : { name : name }
+    meta : { name }
 });
 export {showModal, hideModal};
