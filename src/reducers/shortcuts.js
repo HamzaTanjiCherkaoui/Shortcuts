@@ -13,6 +13,7 @@ const shortcutsReducer = (state = shortcutsReducerDefaultState, action) => {
                 failed: false
             };
         case 'SET_SHORTCUTS_FULFILLED':
+        console.log(action);
             return {
                 ...state,
                 shortcuts: state.shortcuts.concat(action.payload),
