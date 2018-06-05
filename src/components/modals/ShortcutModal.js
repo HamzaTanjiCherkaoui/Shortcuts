@@ -8,7 +8,7 @@ import '../../styles/components/ShortcutModal.css';
 class ShortcutModal extends Component {
     
     render () {
-        const {loading , shortcut:{label,description} ,hideModal } = this.props;
+        const {loading , shortcut:{label,description,imageFile} ,hideModal } = this.props;
         return ( <div>
             {loading && <h3>loading</h3>}
             {!loading && 
@@ -19,7 +19,7 @@ class ShortcutModal extends Component {
                 <p>{description}</p>
                 </div>
                 <div className="shortcutOverview">
-                <img src="./images/shortcut.png" alt="shortcut overview" />
+                <img src={imageFile} alt="shortcut overview" />
                 </div>
 
                 

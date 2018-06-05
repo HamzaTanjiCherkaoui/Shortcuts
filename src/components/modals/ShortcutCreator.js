@@ -72,11 +72,11 @@ class ShortcutCreator extends Component {
         });
     }
     createShortcut = (e) => {
-
+        const {label,description,imageFile,visible} = this.state;
         e.preventDefault();
         this
             .props
-            .dispatch(addShortcut({buttons: this.state.shortcutButtons, description: this.state.description, label: this.state.label, imageFile: this.state.imageFile , visible : this.state.visible }));
+            .dispatch(addShortcut({buttons: this.state.shortcutButtons, description,label,imageFile,visible }));
     }
     handleFileUpload = (e) => {
         const imageFile = e.target.files[0];

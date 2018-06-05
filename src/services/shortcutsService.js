@@ -44,7 +44,7 @@ export const createShortcut = (shortcut) => {
             if(percentage===100){
                 storageRef.getDownloadURL().then(function (url) {
                   const {label,description,visible,buttons} = shortcut;
-                  database .ref('shortcuts').push({buttons,description,label,ImageFile : url, visible}).then(function(){
+                  database.ref('shortcuts').push({buttons,description,label,imageFile:url,visible}).then(function(){
                     resolve({status: "OK"})
                  });
                 });
