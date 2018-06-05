@@ -51,14 +51,18 @@ class ShortcutCreator extends Component {
           }
         }
       }
-
+      resetShortcutButtons = () => {
+        this.setState(()=>({shortcutButtons:[]}));
+      }
 
     render () {
         return ( 
             <div className="shortcutCreator">
             <h3> Create Yout Shortcut :  </h3>
-            <p><i>Type your shortcut buttons one at a  time (use backspace to delete last shortcut button )</i></p>
+            
             <div className={this.state.creatorAreaselected?"creatorArea areaSelected":"creatorArea"}  ref={node => (this.creatorArea=node)} onClick={this.handleOnCreatorAreaClick}>
+            {!this.state.creatorAreaselected && <p className="clickOnArea"> click on the area to type your shortcut </p>}
+            {this.state.shortcutButtons.length===0 && <p> <i>start typing your shortcut buttons one at a  time </i></p>}
             {this.state.shortcutButtons.map(button=>(<div className="shortcutButton" key={button}>{button}</div>))}
             </div>
             <div className="shortcutInfo">
@@ -69,7 +73,7 @@ class ShortcutCreator extends Component {
             
             </div>
             <div className="buttons">
-            <button onClick={()=>{}} className="resetButton"> Reset </button>
+            <button onClick={this.resetShortcutButtons} className="resetButton"> Reset </button>
             <button onClick={this.props.hideModal} className="creatorButton"> Submit </button>
             </div>
             </div>)

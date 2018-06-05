@@ -1,17 +1,22 @@
 import shortcuts from './shortcuts'
-
+import database from '../firebase/firebase';
 const simulateError = false;
 
 export const fetchShortcuts = (query) => {
     return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (simulateError) {
-                reject('Failed to fetch list of shortcuts ');
-            } else {
-                resolve(shortcuts);
-            }
-        }, 5000);
+
+        database.ref('shortcuts').once('value').then((snapshot)=>{
+            const shortcuts = [];
+        snapshot.forEach((childSnapshot)=>{
+        shortcuts.push({
+            id : childSnapshot.key,
+            ...childSnapshot.val()
+        })
+       
     });
+    resolve(shortcuts);     
+});      
+});  
 };
 
 export const getShortcut = (id) => {

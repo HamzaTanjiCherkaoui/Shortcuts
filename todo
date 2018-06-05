@@ -1,8 +1,12 @@
 #### first Iteration ####
 -- no user space 
 -- the currated list with filters , os switch , propositions , pagination (next, prev)
+-- rating 
+--- display by feature or shortcut buttons 
 -- firebase backend 
 -- heroku deployement 
--- tests integration
+
 ### second Iteration ###
 -- user space 
+-- add rating 
+-- tests integration
