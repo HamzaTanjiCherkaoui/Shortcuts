@@ -1,10 +1,11 @@
-import database from '../firebase/firebase';
+import database ,{storageRef} from '../firebase/firebase';
 
 export const fetchShortcuts = (query) => {
     return new Promise((resolve, reject) => {
 
         database
             .ref('shortcuts')
+            .orderByChild("visible").equalTo(true)
             .once('value')
             .then((snapshot) => {
                 const shortcuts = [];
@@ -35,13 +36,20 @@ export const getShortcut = (id) => {
 };
 
 export const createShortcut = (shortcut) => {
+    
     return new Promise((resolve, reject) => {
-        database
-            .ref('shortcuts')
-            .push(shortcut)
-            .then(() => {
-                resolve({status: "OK"})
-            });
+        const task = storageRef.put(shortcut.imageFile);
+        task.on("state_changed",function(snapshot){
+            const percentage= (snapshot.bytesTransferred/ snapshot.totalBytes) *100;
+            if(percentage===100){
+                storageRef.getDownloadURL().then(function (url) {
+                  const {label,description,visible,buttons} = shortcut;
+                  database .ref('shortcuts').push({buttons,description,label,ImageFile : url, visible}).then(function(){
+                    resolve({status: "OK"})
+                 });
+                });
+            }
+         });
 
     });
 };

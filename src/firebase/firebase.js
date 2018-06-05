@@ -13,11 +13,13 @@ firebase.initializeApp(config);
 
 const database = firebase.database();
 
+const storageRef = firebase.storage().ref().child("myImage.png");
 // const alphabets = "ABCDEFJHIJKLMNOPQRSTUVWXYZ".split('');
-// const rand = Math.floor(Math.random() * alphabets.length);
 // const ctrlOrShift= ['Ctrl','shift'];
-// const alternate = Math.floor(Math.random() * 1);
+
 // alphabets.forEach(a => {
+//     let rand = Math.floor(Math.random() * alphabets.length);
+//     let alternate = Math.floor(Math.random() * 1);
 //     database.ref('shortcuts').push(
 //         {
 //             "buttons": [ctrlOrShift[alternate] ,alphabets[rand]],
@@ -25,9 +27,10 @@ const database = firebase.database();
 //             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 //             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidata`,
 //             "label" : "Zoom In 1",
+//             "visible" : true,
 //             "gif" : "shortcut.gif"
 //         }
-//     );
+//     ); 
     
 // })
 // database.ref('shortcuts').push(
@@ -39,7 +42,7 @@ const database = firebase.database();
 //     }
 // );
 
-export {firebase , database as default };
+export {firebase ,storageRef,  database as default };
 
 
 

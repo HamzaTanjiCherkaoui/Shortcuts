@@ -10,7 +10,9 @@ class ShortcutCreator extends Component {
         shortcutButtons: [],
         creatorAreaselected: true,
         description: "",
-        label: ""
+        label: "",
+        visible: false,
+        imageFile: null
     };
     componentDidMount() {
         window.addEventListener('keyup', this.handleKeyUp, false);
@@ -62,7 +64,7 @@ class ShortcutCreator extends Component {
         }
     }
     resetShortcutButtons = () => {
-        this.setState(() => ({shortcutButtons: [],description:'',label:''}));
+        this.setState(() => ({shortcutButtons: [], description: '', label: ''}));
     }
     handleInputChange = (event) => {
         this.setState({
@@ -70,17 +72,24 @@ class ShortcutCreator extends Component {
         });
     }
     createShortcut = (e) => {
-        
+
         e.preventDefault();
-        this.props.dispatch(addShortcut({buttons :this.state.shortcutButtons , description : this.state.description , label : this.state.label}));
+        this
+            .props
+            .dispatch(addShortcut({buttons: this.state.shortcutButtons, description: this.state.description, label: this.state.label, imageFile: this.state.imageFile , visible : this.state.visible }));
     }
+    handleFileUpload = (e) => {
+        const imageFile = e.target.files[0];
+        this.setState(() => ({imageFile}));
+
+    };
     render() {
         return (
             <div className="shortcutCreator">
                 <h3>
                     Create Yout Shortcut :
                 </h3>
-                <form onSubmit={this.createShortcut}>
+                <form onSubmit={this.createShortcut} encType="multipart/form-data">
                     <div
                         className={this.state.creatorAreaselected
                         ? "creatorArea areaSelected"
@@ -116,6 +125,10 @@ class ShortcutCreator extends Component {
                             name="label"
                             value={this.state.label}
                             onChange={this.handleInputChange}></textarea>
+                        <label>
+                            Shortcut Gif :
+                        </label>
+                        <input type="file" onChange={this.handleFileUpload} accept="image/*"/>
 
                     </div>
                     <div className="buttons">
