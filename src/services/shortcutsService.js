@@ -1,6 +1,4 @@
-
 import database from '../firebase/firebase';
-
 
 export const fetchShortcuts = (query) => {
     return new Promise((resolve, reject) => {
@@ -28,7 +26,22 @@ export const getShortcut = (id) => {
             .ref(`shortcuts/${id}`)
             .once('value')
             .then((snapshot) => {
-                resolve({id , ...snapshot.val()});
+                resolve({
+                    id,
+                    ...snapshot.val()
+                });
             });
+    });
+};
+
+export const createShortcut = (shortcut) => {
+    return new Promise((resolve, reject) => {
+        database
+            .ref('shortcuts')
+            .push(shortcut)
+            .then(() => {
+                resolve({status: "OK"})
+            });
+
     });
 };

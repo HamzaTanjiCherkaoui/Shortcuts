@@ -1,4 +1,8 @@
-#### first Iteration ####
+#### first Iteration ###
+    --- basic shortcut creation
+    --- image upload in the firebase bucket 
+    --- pagination
+
 -- no user space 
 -- the currated list with filters , os switch , propositions , pagination (next, prev)
 -- rating 
