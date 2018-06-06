@@ -1,16 +1,33 @@
-#### first Iteration ###
-    --- basic shortcut creation
-    --- image upload in the firebase bucket 
-    --- pagination
-
--- no user space 
--- the currated list with filters , os switch , propositions , pagination (next, prev)
--- rating 
---- display by feature or shortcut buttons 
--- firebase backend 
--- heroku deployement 
+platforms : web only
+#### first Iteration ### 
+    --- basic shortcut creation (done)
+    --- image upload in the firebase bucket  (done )
+    --- pagination 
+    --- firebase querying
+    --- firebase connection error handling 
+    --- rating -> sign up for our next release of shortcut io ( user space etc ...) 
+    --- display by feature or shortcut buttons !
+    --- google analytics
+    -- heroku deployement 
 
 ### second Iteration ###
--- user space 
+
+-- switch from firebase to (node Js / spring / django) backend
+-- basic user space (
+    -- user can login 
+    -- user can create shortcuts
+    -- user can have a favorit list
+    -- user can rate
+    -- user can update his profil
+)
 -- add rating 
 -- tests integration
+
+### third Iteration ###
+--- advanced user space
+    ( --- user can follow / unfollow
+      --- user has
+      --- users can chat with each other
+      --- user can record a shortcut gif via our extension
+      --- user have a custom feed (activity feed)
+    )
