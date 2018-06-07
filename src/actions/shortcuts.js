@@ -7,7 +7,8 @@ import {fetchShortcuts,getShortcut as fetchShortcut , createShortcut} from '../s
 
 const getShortcut = (id) => ({
     type : 'GET_SHORTCUT',
-    payload : fetchShortcut(id)
+    payload : fetchShortcut(id),
+    mockData : id
 });
 
 const unselectShortcut = (id) => ({

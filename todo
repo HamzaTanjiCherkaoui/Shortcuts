@@ -9,6 +9,18 @@ platforms : web only
     --- display by feature or shortcut buttons !
     --- google analytics
     -- heroku deployement 
+   dev enhancement : 
+   --- adding propsTypes 
+    (react redux refactoring ) => connect(null,{actionGenerator})(Component) to map dispatch to props
+    middlewares : api , routing ? , users ? , investigate in react redux routing 
+    ( redux refactoring) reducer , actions  ,middleware all in one file in ducks folder ( redux ducks )
+    migrate to redux saga
+    normalize state ? redux-normalizer/denormalizer ?
+    deep dive in redux selectors
+    Flow or TypeScript ?
+    selectors memorisation 
+    see observatory to check security concerns
+
 
 ### second Iteration ###
 

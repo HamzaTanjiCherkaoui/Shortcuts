@@ -1,4 +1,4 @@
-const shortcutsReducerDefaultState = {
+const shortcutsMockReducerDefaultState = {
     shortcuts: [],
     fetching: false,
     fetched: false,
@@ -7,10 +7,10 @@ const shortcutsReducerDefaultState = {
     loadingSelectedShortcut: false
 }
 
-const shortcutsReducer = (state = shortcutsReducerDefaultState, action) => {
+const shortcutsReducer = (state = shortcutsMockReducerDefaultState, action) => {
 
     switch (action.type) {
-        case 'SET_SHORTCUTS_PENDING':
+        case 'SET_SHORTCUTS_MOCK_PENDING':
 
             return {
                 ...state,
@@ -19,7 +19,7 @@ const shortcutsReducer = (state = shortcutsReducerDefaultState, action) => {
                 fetched: false,
                 failed: false
             };
-        case 'SET_SHORTCUTS_FULFILLED':
+        case 'SET_SHORTCUTS_MOCK_FULFILLED':
             return {
                 ...state,
                 shortcuts: state
@@ -37,12 +37,12 @@ const shortcutsReducer = (state = shortcutsReducerDefaultState, action) => {
                 fetched: false,
                 failed: true
             };
-        case 'GET_SHORTCUT_PENDING':
+        case 'GET_SHORTCUT_MOCK_PENDING':
             return {
                 ...state,
                 loadingSelectedShortcut: true
             }
-        case 'GET_SHORTCUT_FULFILLED':
+        case 'GET_SHORTCUT_MOCK_FULFILLED':
             return {
                 ...state,
                 loadingSelectedShortcut: false,

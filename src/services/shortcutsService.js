@@ -1,5 +1,16 @@
 import database ,{storageRef} from '../firebase/firebase';
+import shortcuts from './shortcuts';
 
+export const fetchShortcutsMock = (query) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(()=>{resolve(shortcuts)},2000);
+    });
+}
+export const getShortcutMock = (id) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(()=>{resolve(shortcuts[id])},2000);
+    });
+}
 export const fetchShortcuts = (query) => {
     return new Promise((resolve, reject) => {
 
