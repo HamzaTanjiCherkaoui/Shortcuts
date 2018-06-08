@@ -2,6 +2,9 @@ platforms : web only
 #### first Iteration ### 
     --- basic shortcut creation (done)
     --- image upload in the firebase bucket  (done )
+    --- adding each os buttons (done)
+    --- switch Mac/Windows selector (done) (left firebase )
+    --- display by feature or shortcut buttons(done) ! 
     --- changing the initial state for shortcutsState to be retreived from the server
     --- pagination     
     --- firebase querying
