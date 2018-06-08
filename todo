@@ -2,17 +2,17 @@ platforms : web only
 #### first Iteration ### 
     --- basic shortcut creation (done)
     --- image upload in the firebase bucket  (done )
-    --- pagination 
+    --- changing the initial state for shortcutsState to be retreived from the server
+    --- pagination     
     --- firebase querying
     --- firebase connection error handling 
-    --- rating -> sign up for our next release of shortcut io ( user space etc ...) 
-    --- display by feature or shortcut buttons !
+
     --- google analytics
     -- heroku deployement 
    dev enhancement : 
-   --- adding propsTypes 
-    (react redux refactoring ) => connect(null,{actionGenerator})(Component) to map dispatch to props
-    middlewares : api , routing ? , users ? , investigate in react redux routing 
+    
+    middlewares : api , routing ? , users ? ,  authorization middleware that checks if the user has permissions
+to run the action,  investigate in react redux routing 
     ( redux refactoring) reducer , actions  ,middleware all in one file in ducks folder ( redux ducks )
     migrate to redux saga
     normalize state ? redux-normalizer/denormalizer ?

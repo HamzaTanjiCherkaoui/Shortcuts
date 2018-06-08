@@ -1,4 +1,4 @@
-const uiReducerState = {displayModal: [{name:"",action:''}] }
+const uiReducerState = {displayModal: [{name:"",action:''}] , currentOs : 'win', displayBy:'shortcuts'}
 
 const uiReducer = (state = uiReducerState, action) => {
     //TODO handle the undefined handling outiside the component or see how to get ride of it
@@ -14,6 +14,16 @@ const uiReducer = (state = uiReducerState, action) => {
         return {
             ...state,
             displayModal:[{name : action.meta.name , show : false }]
+        }
+        case 'SET_OS':
+        return {
+            ...state,
+            currentOs : action.meta.osToSet
+        }
+        case 'SET_DISPLAYBY':
+        return {
+            ...state,
+            displayBy : action.meta.displayBy
         }
         default:
             return state;

@@ -16,11 +16,8 @@
     animation: show .5s ease;
   }
   .modal {
-    width: 100%;
-    flex-grow: 0.5;
-    background-color: #fff;
-    box-shadow: 0.2rem 0.3rem 1.7rem 0 rgba(0,0,0,.13);
-    padding : 50px;
+    width: 60%;
+    
     position: relative;
     
   }
@@ -37,4 +34,10 @@
     outline: 0;
     
     
+  }
+  .modal__content {
+    flex-grow: 0.5;
+    background-color: #fff;
+    box-shadow: 0.2rem 0.3rem 1.7rem 0 rgba(0,0,0,.13);
+    padding : 50px;
   }

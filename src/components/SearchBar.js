@@ -2,14 +2,17 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {fetchShortcuts} from '../actions/shortcuts';
 import Picker from './common/Picker';
+import OsSwitchButton from './OsSwitchButton';
+import DisplayBySwitchButton from './DisplayBySwitchButton';
 import '../styles/components/SearchBar.css';
 class SearchBar extends React.Component {
-
+    
     handleSearch = () => {
         this
             .props
             .dispatch(fetchShortcuts({text: 'zoom'}));
     }
+    
     render() {
         return (
             <div className="SearchBar">
@@ -25,7 +28,8 @@ class SearchBar extends React.Component {
                 <button
                     className=" SearchBar__Button"
                     onClick={this.handleSearch}>Search</button>
-                <button>Mac / Win </button>
+                <OsSwitchButton />
+                <DisplayBySwitchButton/>
             </div>
         )
     }

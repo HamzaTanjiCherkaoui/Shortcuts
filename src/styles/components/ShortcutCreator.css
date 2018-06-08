@@ -10,6 +10,7 @@ border-radius: 5px;
 cursor: pointer;
 border: 3px dotted #e0e0e0;
 position: relative;
+
 }
 .shortcutButton {
 margin-left: 10px;
@@ -79,4 +80,13 @@ border: 1px solid #357edd;
     margin-top: 10px;
     border-radius: 3px;
     border: 1px dotted #ff8800e8;
+}
+.clearfix:before,.clearfix:after {
+    display: table;
+  content: " ";
+
+}
+.clearfix:after {
+    clear: both;
+
 }

@@ -1,0 +1,12 @@
+.SwitchButton {
+    margin-left: 100px;
+    border-radius: 50px;    
+    text-align: center;
+    padding: 10px;
+   
+}
+.switch {
+    background: #357edd;
+    border:  1px solid #357edd;
+    color: #fff;
+}

@@ -72,11 +72,11 @@ class ShortcutCreator extends Component {
         });
     }
     createShortcut = (e) => {
-        const {label,description,imageFile,visible} = this.state;
+        const {label, description, imageFile, visible} = this.state;
         e.preventDefault();
         this
             .props
-            .dispatch(addShortcut({buttons: this.state.shortcutButtons, description,label,imageFile,visible }));
+            .dispatch(addShortcut({buttons: this.state.shortcutButtons, description, label, imageFile, visible}));
     }
     handleFileUpload = (e) => {
         const imageFile = e.target.files[0];
@@ -126,6 +126,13 @@ class ShortcutCreator extends Component {
                             value={this.state.label}
                             onChange={this.handleInputChange}></textarea>
                         <label>
+                            OS :
+                        </label>
+                        <select>
+                        <option>Windows </option>
+                        <option>MacOs </option>
+                        </select>
+                        <label>
                             Shortcut Gif :
                         </label>
                         <input type="file" onChange={this.handleFileUpload} accept="image/*"/>
@@ -138,9 +145,10 @@ class ShortcutCreator extends Component {
                         <button className="creatorButton">
                             Submit
                         </button>
+                        
                     </div>
                 </form>
-
+                            <div class="clearfix"></div>
             </div>
         )
 

@@ -8,4 +8,12 @@ const hideModal = (name) => ({
     type : 'HIDE_MODAL',
     meta : { name }
 });
-export {showModal, hideModal};
+const setOs = (osToSet) => ({
+    type : 'SET_OS',
+    meta : { osToSet }
+});
+const setDisplayBy = (displayBy) => ({
+    type : 'SET_DISPLAYBY',
+    meta : { displayBy }
+});
+export {showModal, hideModal , setOs , setDisplayBy};

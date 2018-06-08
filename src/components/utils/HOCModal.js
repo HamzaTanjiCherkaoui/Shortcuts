@@ -27,6 +27,7 @@ export default (modalName)=>(WrappedComponent) => {
                     {(this.state.showModal) &&
                         <Modal onCloseRequest={this.hideModal}>
                         <WrappedComponent hideModal={this.hideModal} {...this.props} />
+                        <div class="clearfix"></div>
                         </Modal>}
                 </div>
             );

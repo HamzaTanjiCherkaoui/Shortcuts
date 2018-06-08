@@ -1,83 +1,119 @@
 [
     {
         "id": 1,
-        "buttons": ["Ctrl", "A", "Z"],
+        "buttons": {
+            "win" : ["Ctrl", "A", "Z"],
+            "mac" :null
+        },
         "description" :"lorem ipsum dollor",
         "label" : "Zoom Out 1",
         "gif" : "shortcut.gif"
     }, {
         "id": 2,
-        "buttons": ["Ctrl", "C"],
+        "buttons" : {
+            "win" : ["Ctrl", "C"],
+            "mac" :  ["CMD", "C"]
+        },
         "description" :"lorem ipsum dollor",
         "label" : "Zoom Out 2",
         "gif" : "shortcut.gif"
     },
     {
         "id": 3,
-        "buttons": ["Ctrl", "C3"],
+        "buttons" : {
+            "win" : ["Ctrl", "C3"],
+            "mac" :  ["CMD", "C3"]
+        },
         "description" :"lorem ipsum dollor",
         "label" : "Zoom Out 3",
         "gif" : "shortcut.gif"
     },
     {
         "id": 4,
-        "buttons": ["Ctrl", "C4"],
+        "buttons" : {
+            "win" : ["Ctrl", "C4"],
+            "mac" :  ["CMD", "C4"]
+        },
         "description" :"lorem ipsum dollor",
         "label" : "Zoom Out 4",
         "gif" : "shortcut.gif"
     },
     {
         "id": 5,
-        "buttons": ["Ctrl", "C5"],
+        "buttons" : {
+            "win" : ["Ctrl", "C5"],
+            "mac" :  ["CMD", "C5"]
+        },
         "description" :"lorem ipsum dollor",
         "label" : "Zoom Out 5",
         "gif" : "shortcut.gif"
     },
     {
         "id": 6,
-        "buttons": ["Ctrl", "C6"],
+        "buttons" : {
+            "win" : ["Ctrl", "C6"],
+            "mac" :  ["CMD", "C6"]
+        },
         "description" :"lorem ipsum dollor",
         "label" : "Zoom Out 6",
         "gif" : "shortcut.gif"
     },
     {
         "id": 7,
-        "buttons": ["Ctrl", "C7"],
+        "buttons" : {
+            "win" : ["Ctrl", "C7"],
+            "mac" :null
+        },
         "description" :"lorem ipsum dollor",
         "label" : "Zoom Out 7",
         "gif" : "shortcut.gif"
     },
     {
         "id": 8,
-        "buttons": ["Ctrl", "C8"],
+        "buttons" : {
+            "win" : ["Ctrl", "C8"],
+            "mac" :null
+        },
         "description" :"lorem ipsum dollor",
         "label" : "Zoom Out 8",
         "gif" : "shortcut.gif"
     },
     {
         "id": 9,
-        "buttons": ["Ctrl", "C9"],
+        "buttons" : {
+            "win" : ["Ctrl", "C9"],
+            "mac" :null
+        },
         "description" :"lorem ipsum dollor",
         "label" : "Zoom Out 9",
         "gif" : "shortcut.gif"
     },
     {
         "id": 10,
-        "buttons": ["Ctrl", "C10"],
+        "buttons" : {
+            "win"  :["Ctrl", "C10"],
+            "mac" :null
+        },
         "description" :"lorem ipsum dollor",
         "label" : "Zoom Out 10",
         "gif" : "shortcut.gif"
     },
     {
         "id": 11,
-        "buttons": ["Ctrl", "C11"],
+        "buttons" : {
+            "win"  :["Ctrl", "C11"],
+            "mac" :null
+        },
         "description" :"lorem ipsum dollor",
         "label" : "Zoom Out 11",
         "gif" : "shortcut.gif"
     },
     {
         "id": 12,
-        "buttons": ["Ctrl", "C12"],
+        "buttons" : {
+            "win" : ["Ctrl", "C12"],
+            "mac" :null
+        },
         "description" :"lorem ipsum dollor",
         "label" : "Zoom Out 12",
         "gif" : "shortcut.gif"

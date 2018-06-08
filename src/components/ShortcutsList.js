@@ -7,7 +7,10 @@ import ShortcutModal from './modals/ShortcutModal';
 import {getShortcut} from '../actions/shortcuts';
 import {showModal} from '../actions/ui';
 
-@connect()
+const mapStateToProps = (state) => {
+    return {currentOs: state.ui.currentOs};
+}
+@connect(mapStateToProps)
 class ShortcutList extends React.Component{
 
     showShortcutModal = (id) => {
@@ -18,8 +21,9 @@ class ShortcutList extends React.Component{
     render() {
         return  (
         <div className="ShortcutsList">
-        <ShortcutModal className="Test"/>
-            {this.props.shortcuts.map(shortcut=>(<ShortcutItem shortcut={shortcut} key={shortcut.id} handleShortcutItemClick={this.showShortcutModal}/>))}        
+        <ShortcutModal/>
+            {this.props.shortcuts.map(shortcut=>(shortcut
+                .buttons[this.props.currentOs] && <ShortcutItem shortcut={shortcut} key={shortcut.id} handleShortcutItemClick={this.showShortcutModal}/>))}        
         </div>
     ) }
 }

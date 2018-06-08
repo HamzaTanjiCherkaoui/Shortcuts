@@ -2,7 +2,8 @@ import {fetchShortcuts,getShortcut as fetchShortcut , createShortcut} from '../s
 
  const setShortcuts = ({query} = {query:{sort:'trending'}}) => ({
     type: 'SET_SHORTCUTS',
-    payload: fetchShortcuts(query)
+    payload: fetchShortcuts(query),
+    mockData : query
 });
 
 const getShortcut = (id) => ({

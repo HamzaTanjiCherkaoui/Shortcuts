@@ -1,0 +1,11 @@
+
+--- adding each os buttons (done)
+--- switch Mac/Windows selector (done) (left firebase )
+--- display by feature or shortcut buttons(done) ! 
+--- rating -> sign up for our next release of shortcut io ( user space etc ...) 
+
+
+devs enhancements : 
+   --- adding propsTypes 
+   --- add action types 
+   --- (react redux refactoring ) => connect(null,{actionGenerator})(Component) to map dispatch to props
