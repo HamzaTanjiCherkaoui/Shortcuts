@@ -29,6 +29,10 @@ class SearchResult extends React.Component {
               
                 }
                 {fetched && <ShortcutsList shortcuts={shortcuts}/>}
+                <div class="pagination" >
+                <button> prev </button>
+                <button> next </button>
+                </div>
             </div>
         )
     }

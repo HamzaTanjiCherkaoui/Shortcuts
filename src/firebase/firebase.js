@@ -22,14 +22,16 @@ const storageRef = firebase.storage().ref().child("myImage.png");
 //     let alternate = Math.floor(Math.random() * 1);
 //     database.ref('shortcuts').push(
 //         {
-//             "buttons": [ctrlOrShift[alternate] ,alphabets[rand]],
+//             "buttons": {
+//                 "win":[ctrlOrShift[alternate] ,alphabets[rand]]
+//             },
 //             "description" :`lorem ipsum dollor ipsum  
 //             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 //             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidata`,
 //             "label" : "Zoom In 1",
 //             "visible" : true,
 //             "gif" : "shortcut.gif"
-//         }
+//         }  
 //     ); 
     
 // })

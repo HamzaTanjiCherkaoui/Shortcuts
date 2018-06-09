@@ -2,8 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import '../styles/components/Navigation.css';
-
 import ShortcutCreator from './modals/ShortcutCreator';
+import SubscribeModal from './modals/SubscribeModal';
 import {showModal} from '../actions/ui';
 
 @connect()
@@ -20,7 +20,7 @@ class Navigation extends React.Component {
     render() {
         return (
             <div className="Navbar">
-            
+            <SubscribeModal/>
             <ShortcutCreator/>
                 <nav className="Navbar__Items">
                     <div className="Navbar__Link Navbar__Link-brand">

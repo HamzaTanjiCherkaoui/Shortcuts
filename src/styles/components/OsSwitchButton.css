@@ -1,5 +1,12 @@
+.switchOsSection {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.switchOsSection label {
+    font-size: 12px;
+    padding-right: 10px;
+}
 .SwitchButton {
-    margin-left: 100px;
     border-radius: 50px;    
     text-align: center;
     padding: 10px;

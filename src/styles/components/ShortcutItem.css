@@ -63,6 +63,7 @@ color : #357edd;
     text-align: center;
     vertical-align: middle;
     color : #357edd;
-    font-family: 'Ubuntu',sans-serif;
+    /* font-family: 'Ubuntu',sans-serif; */
     font-size: 20px;
+    font-weight: 100;
 }

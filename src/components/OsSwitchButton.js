@@ -11,7 +11,10 @@ class OsSwitchButton extends React.Component {
     }
     render() {
         return (
-            <button className={this.props.currentOs ==='mac'?'SwitchButton':'SwitchButton switch'} onClick={this.handleSwitchOs}> {this.props.currentOs} </button>
+            <div className="switchOsSection">
+            <label>switch OS </label>
+            <button className={this.props.currentOs ==='mac'?'SwitchButton':'SwitchButton switch'} onClick={this.handleSwitchOs}> {this.props.currentOs==='win'?(<i class="fab fa-windows"></i>):(<i class="fab fa-apple"></i>)} </button>
+            </div>
         )
     }
 }

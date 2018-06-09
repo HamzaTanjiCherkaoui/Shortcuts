@@ -54,8 +54,8 @@ export const createShortcut = (shortcut) => {
             const percentage= (snapshot.bytesTransferred/ snapshot.totalBytes) *100;
             if(percentage===100){
                 storageRef.getDownloadURL().then(function (url) {
-                  const {label,description,visible,buttons} = shortcut;
-                  database.ref('shortcuts').push({buttons,description,label,imageFile:url,visible}).then(function(){
+                  const {label,description,visible,buttons,selectedOs} = shortcut;
+                  database.ref('suggestedShortcuts').push({buttons,description,label,imageFile:url,visible,selectedOs}).then(function(){
                     resolve({status: "OK"})
                  });
                 });

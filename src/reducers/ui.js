@@ -1,7 +1,6 @@
 const uiReducerState = {displayModal: [{name:"",action:''}] , currentOs : 'win', displayBy:'shortcuts'}
 
 const uiReducer = (state = uiReducerState, action) => {
-    //TODO handle the undefined handling outiside the component or see how to get ride of it
     if(action.meta === undefined)
     action.meta = {};
     switch (action.type) {

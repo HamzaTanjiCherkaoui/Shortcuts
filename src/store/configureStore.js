@@ -9,7 +9,7 @@ import mock from '../middlewares/mock';
 
 
 export default() => {
-    const store = createStore(combineReducers({shortcutsState: shortcutsReducer , ui : uiReducer , shortcutsState : shortcutsMockReducer}), applyMiddleware(mock(true),thunk, promiseMiddleware() , log(true)));
+    const store = createStore(combineReducers({shortcutsState: shortcutsReducer , ui : uiReducer }), applyMiddleware(mock(false),thunk, promiseMiddleware() , log(true)));
 
     return store;
 };

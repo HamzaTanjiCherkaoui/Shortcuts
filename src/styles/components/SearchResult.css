@@ -46,3 +46,9 @@
     justify-content: center;
     
   }
+  .pagination {
+      display: flex;
+      justify-content: center;
+      border-top: 1px solid rgb(240, 240, 240);
+      padding: 20px;
+  }

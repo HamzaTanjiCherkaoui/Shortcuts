@@ -6,10 +6,13 @@ platforms : web only
     --- switch Mac/Windows selector (done) (left firebase )
     --- display by feature or shortcut buttons(done) ! 
     --- changing the initial state for shortcutsState to be retreived from the server
+    --- change the firebase backend to add shortcut to a suggestedShortcuts )
+    --- think of a way to limit insertion ( shortcut already exist) based on the hash value that 
+    is generated from the buttons array 
     --- pagination     
     --- firebase querying
     --- firebase connection error handling 
-
+    --- add a backend 
     --- google analytics
     -- heroku deployement 
    dev enhancement : 

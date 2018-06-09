@@ -12,7 +12,8 @@ class ShortcutCreator extends Component {
         description: "",
         label: "",
         visible: false,
-        imageFile: null
+        imageFile: null,
+        selectedOs:'mac'
     };
     componentDidMount() {
         window.addEventListener('keyup', this.handleKeyUp, false);
@@ -54,17 +55,14 @@ class ShortcutCreator extends Component {
         this.setState(() => ({creatorAreaselected: true}));
     }
     handleOutsideClick = (e) => {
-        console.log("handleOutsideClick");
-
         if (this.creatorArea) {
             if (!this.creatorArea.contains(e.target)) {
-
                 this.setState(() => ({creatorAreaselected: false}));
             }
         }
     }
     resetShortcutButtons = () => {
-        this.setState(() => ({shortcutButtons: [], description: '', label: ''}));
+        this.setState(() => ({shortcutButtons: [], description: '', label: '' , selectedOs : ''}));
     }
     handleInputChange = (event) => {
         this.setState({
@@ -72,11 +70,11 @@ class ShortcutCreator extends Component {
         });
     }
     createShortcut = (e) => {
-        const {label, description, imageFile, visible} = this.state;
+        const {label, description, imageFile, visible , selectedOs} = this.state;
         e.preventDefault();
         this
             .props
-            .dispatch(addShortcut({buttons: this.state.shortcutButtons, description, label, imageFile, visible}));
+            .dispatch(addShortcut({buttons: this.state.shortcutButtons, description, label, imageFile, visible , selectedOs}));
     }
     handleFileUpload = (e) => {
         const imageFile = e.target.files[0];
@@ -128,9 +126,9 @@ class ShortcutCreator extends Component {
                         <label>
                             OS :
                         </label>
-                        <select>
-                        <option>Windows </option>
-                        <option>MacOs </option>
+                        <select name="selectedOs" value={this.state.selectedOs} onChange={this.handleInputChange}>
+                        <option value="win">Windows </option>
+                        <option value="mac">MacOs </option>
                         </select>
                         <label>
                             Shortcut Gif :
@@ -148,7 +146,7 @@ class ShortcutCreator extends Component {
                         
                     </div>
                 </form>
-                            <div class="clearfix"></div>
+                            
             </div>
         )
 

@@ -17,7 +17,7 @@
   }
   .modal {
     width: 60%;
-    
+    height: 0;
     position: relative;
     
   }

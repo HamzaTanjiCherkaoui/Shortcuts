@@ -41,11 +41,9 @@ class SimpleModal extends React.Component {
             <button className="modal__closeButton" onClick={onCloseRequest}>X</button>
             <div className="modal__content">
                 {children}
-                <div class="clearfix"></div>
             </div>
-            <div class="clearfix"></div>
             </div>
-            <div class="clearfix"></div>
+            
         </div>)
     }
 }
