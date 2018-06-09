@@ -1,6 +1,6 @@
 import {fetchShortcuts,getShortcut as fetchShortcut , createShortcut} from '../services/shortcutsService';
 
- const setShortcuts = ({query} = {query:{sort:'trending'}}) => ({
+ const setShortcuts = (query) => ({
     type: 'SET_SHORTCUTS',
     payload: fetchShortcuts(query),
     mockData : query

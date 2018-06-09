@@ -28,7 +28,7 @@ const mock = (on) => ({dispatch, getState}) => (next) => (action) => {
 
         }
     }
-    console.log("mockAction", mockAction)
+    
     next(mockAction);
 
 }
