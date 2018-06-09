@@ -30,7 +30,8 @@ const storageRef = firebase.storage().ref().child("myImage.png");
 //             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidata`,
 //             "label" : "Zoom In 1",
 //             "visible" : true,
-//             "gif" : "shortcut.gif"
+//             "gif" : "shortcut.gif",
+//             "software" : "illustrator"
 //         }  
 //     ); 
     

@@ -27,7 +27,7 @@ class SearchBar extends React.Component {
                 }}/>
                 <button
                     className=" SearchBar__Button"
-                    onClick={this.handleSearch}>Search</button>
+                    onClick={this.handleSearch}> <i className="fas fa-search"></i></button>
                 <OsSwitchButton />
                 <DisplayBySwitchButton/>
             </div>
