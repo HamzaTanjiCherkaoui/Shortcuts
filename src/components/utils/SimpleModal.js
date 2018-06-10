@@ -3,10 +3,12 @@ import '../../styles/components/utils/Modal.css';
 class SimpleModal extends React.Component {
     
     componentDidMount(){
+        document.body.style.overflow = "hidden";
         window.addEventListener('keyup',this.handleKeyUp,false);
         document.addEventListener('click',this.handleOutsideClick,false);
     }
     componentWillUnmount() {
+        document.body.style.overflow = "auto";
         window.removeEventListener('keyup', this.handleKeyUp, false);
         document.removeEventListener('click', this.handleOutsideClick, false);
       }
