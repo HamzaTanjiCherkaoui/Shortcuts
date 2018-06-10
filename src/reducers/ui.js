@@ -24,6 +24,11 @@ const uiReducer = (state = uiReducerState, action) => {
             ...state,
             displayBy : action.meta.displayBy
         }
+        case 'SET_SEARCH_QUERY':
+        return {
+            ...state,
+            searchQuery : action.searchQuery
+        }
         default:
             return state;
     }
