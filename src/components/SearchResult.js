@@ -3,10 +3,12 @@ import {connect} from 'react-redux';
 import '../styles/components/SearchResult.css';
 import ShortcutsList from './ShortcutsList';
 import {fetchShortcuts} from '../actions/shortcuts';
+import getVisibleShortcuts from '../selectors/shortcuts';
 
 const mapStateToProps = (state) => {
     const {shortcuts, fetching, fetched} = state.shortcutsState;
-    return ({shortcuts, fetching, fetched})
+    const visibleShortcuts = getVisibleShortcuts(shortcuts,state.ui.searchQuery);
+    return ({shortcuts :visibleShortcuts , fetching, fetched})
 };
 
 @connect(mapStateToProps)

@@ -14,7 +14,8 @@ class SearchBar extends React.Component {
             .dispatch(fetchShortcuts({software: this.state.software}));
     }
     handleSearchQueryChanged = (event) => {
-        this.props.dispatch(setSearchQuery(event));
+        this.props.dispatch(setSearchQuery(event.target.value));
+        this.setState({searchQuery :event.target.value})
     }
     handlePickerChange = (software) => {
         this.setState({software})

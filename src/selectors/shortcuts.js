@@ -1,9 +1,6 @@
-// Get Visible expenses 
-import moment from 'moment';
-
 const getVisibleShortcuts = (shortcuts,searchQuery) => {
     
-    return shortcuts.filter(shortcut => shortcut.label.includes(searchQuery));
+    return shortcuts.filter(shortcut => searchQuery?shortcut.label.includes(searchQuery):true);
 }
 
 export default getVisibleShortcuts;
