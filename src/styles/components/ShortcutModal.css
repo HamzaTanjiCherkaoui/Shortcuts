@@ -23,3 +23,22 @@
     float: right;
     
 }
+
+.shortcutModal__loading-placeholder {
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+.shortcutModal__loading-placeholder .shortModalLoader {
+    height: 13px;
+    display: -ms-flexbox;
+    width: 200px;
+    -ms-flex: 1 1 1;
+    flex-grow: 1;
+    margin-bottom: 7px;
+    margin-top: 0;
+    border-radius: 5px;
+    -ms-flex-pack: center;
+    justify-content: center;
+}

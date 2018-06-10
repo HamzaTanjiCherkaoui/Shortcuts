@@ -10,7 +10,19 @@ class ShortcutModal extends Component {
     render () {
         const {loading , shortcut:{label,description,imageFile} ,hideModal } = this.props;
         return ( <div>
-            {loading && <h3>loading</h3>}
+            {loading && 
+            <div className="ShortcutModalContent">
+                <div className="shortcutDetails">
+                    <div className="shortcutModal__loading-placeholder">
+                        <div className="animated-background shortModalLoader"></div>
+                        <div className="animated-background shortModalLoader"></div>
+                    </div>
+                </div>
+                <div className="shortcutOverview">
+                    <img src='./images/placeholder.png' alt="shortcut overview" />
+                </div>
+            </div>
+                }
             {!loading && 
                 <div>
             <div className="ShortcutModalContent">
