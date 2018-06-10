@@ -43,10 +43,6 @@ class SearchResult extends React.Component {
               
                 }
                 {fetched && <ShortcutsList shortcuts={shortcuts}/>}
-                <div className="pagination" >
-                {this.state.page!==0 &&<button onClick={this.getPreviousShortcuts}> <i className="fas fa-chevron-circle-left"></i> </button>}
-                <button onClick={this.getNextShortcuts}> <i className="fas fa-chevron-circle-right"></i> </button>
-                </div>
             </div>
         )
     }

@@ -19,7 +19,11 @@ class ShortcutItem extends React.Component {
 
                 {displayBy === 'shortcuts'
                     ? (
-                        <div className="flex">{shortcut
+                        <div className="flex">
+                        <div className="software">
+                        <img src = {"./images/softwaresIcons/"+shortcut.software+".png"} />
+                        </div>
+                        {shortcut
                                 .buttons[currentOs]
                                 .map((button, i, buttons) => (<ShortcutButtons button={button} isLast={(buttons.length) !== i + 1} key={i}/>))}</div>
                     )

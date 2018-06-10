@@ -22,6 +22,9 @@ class ShortcutList extends React.Component{
         return  (
         <div className="ShortcutsList">
         <ShortcutModal/>
+        {this.props.shortcuts.length===0 && <p> no shortcut to show for your request</p>}
+        {this.props.shortcuts.every(shortcut => shortcut
+            .buttons[this.props.currentOs] ===undefined )  && <p> no shortcuts to show for the selected Os</p>}
             {this.props.shortcuts.map(shortcut=>(shortcut
                 .buttons[this.props.currentOs] && <ShortcutItem shortcut={shortcut} key={shortcut.id} handleShortcutItemClick={this.showShortcutModal}/>))}        
         </div>
