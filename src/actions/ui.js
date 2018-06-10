@@ -16,4 +16,8 @@ const setDisplayBy = (displayBy) => ({
     type : 'SET_DISPLAYBY',
     meta : { displayBy }
 });
-export {showModal, hideModal , setOs , setDisplayBy};
+const setSearchQuery = (searchQuery) => ({
+    type:'SET_SEARCH_QUERY',
+    searchQuery
+})
+export {showModal, hideModal , setOs , setDisplayBy ,setSearchQuery};

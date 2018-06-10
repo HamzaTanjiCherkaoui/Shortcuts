@@ -19,7 +19,7 @@ class ShortcutModal extends Component {
                 <p>{description}</p>
                 </div>
                 <div className="shortcutOverview">
-                <img src={imageFile} alt="shortcut overview" />
+                <img src={imageFile?imageFile:'./images/placeholder.png'} alt="shortcut overview" />
                 
                 </div>
                 

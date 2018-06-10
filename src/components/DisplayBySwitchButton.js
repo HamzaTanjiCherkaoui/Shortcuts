@@ -11,7 +11,7 @@ class DisplayBySwitchButton extends React.Component {
     }
     render() {
         return (
-            <button className={this.props.displayBy ==='shortcuts'?'SwitchButton':'SwitchButton switch'} onClick={this.handleSwitchDisplayBy}> <i className="fas fa-exchange-alt"></i> {this.props.displayBy} </button>
+            <button className={this.props.displayBy ==='shortcuts'?'SwitchButton':'SwitchButton switch'} onClick={this.handleSwitchDisplayBy}> <i class="fas fa-angle-left"></i> {this.props.displayBy} <i class="fas fa-angle-right"></i></button>
         )
     }
 }

@@ -31,9 +31,11 @@ font-weight: 700;
 }
 
 body{
-  background: #f1f4f5;
+  /* background: #f1f4f5; */
   color: #274057;
-  font-family: 'Raleway', sans-serif;
+  background: #357edd;
+  /* font-family: 'Raleway', sans-serif; */
+  font-family: 'Ubuntu', sans-serif;
 }
 .container {
   width: 1200px;

@@ -27,8 +27,12 @@ class ShortcutItem extends React.Component {
                                 .buttons[currentOs]
                                 .map((button, i, buttons) => (<ShortcutButtons button={button} isLast={(buttons.length) !== i + 1} key={i}/>))}</div>
                     )
-                    : (
+                    : (<div>
+                        <div className="software">
+                        <img src = {"./images/softwaresIcons/"+shortcut.software+".png"} />
+                        </div>
                         <div className="feature">{shortcut.label}</div>
+                        </div>
                     )}
             </div>
         )
