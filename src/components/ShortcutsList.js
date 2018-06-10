@@ -10,7 +10,7 @@ import {showModal} from '../actions/ui';
 const mapStateToProps = (state) => {
     return {currentOs: state.ui.currentOs};
 }
-@connect(mapStateToProps)
+
 class ShortcutList extends React.Component{
 
     showShortcutModal = (id) => {
@@ -30,4 +30,4 @@ class ShortcutList extends React.Component{
     ) }
 }
 
-export default ShortcutList;
+export default connect(mapStateToProps)(ShortcutList);

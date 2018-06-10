@@ -3,7 +3,6 @@ import isModal from '../utils/HOCModal';
 
 import '../../styles/components/SubscribeModal.css';
 
-@isModal('SUBSCRIBE') 
 
 class SubscribeModal extends Component {    
     render () {
@@ -14,4 +13,4 @@ class SubscribeModal extends Component {
              </div>)
     }
 }
-export default SubscribeModal;
+export default isModal('SUBSCRIBE') (SubscribeModal);

@@ -6,7 +6,7 @@ import ShortcutCreator from './modals/ShortcutCreator';
 import SubscribeModal from './modals/SubscribeModal';
 import {showModal} from '../actions/ui';
 
-@connect()
+
 class Navigation extends React.Component {
     showSignInModal = () => {
         this.props.dispatch(showModal('SIGNIN'));
@@ -40,7 +40,7 @@ class Navigation extends React.Component {
         );
     }
 }
-export default Navigation ;
+export default connect()(Navigation) ;
 // <div className="Navbar__Link ">
 //                         <a  onClick={this.showSignInModal}>Sign In</a>
 //                     </div>

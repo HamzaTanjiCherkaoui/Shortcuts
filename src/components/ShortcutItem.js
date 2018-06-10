@@ -7,7 +7,7 @@ import ShortcutButtons from './ShortcutButtons';
 const mapStateToProps = (state) => {
     return {currentOs: state.ui.currentOs, displayBy: state.ui.displayBy};
 }
-@connect(mapStateToProps)
+
 class ShortcutItem extends React.Component {
     render() {
         const {shortcut, handleShortcutItemClick, currentOs, displayBy} = this.props;
@@ -39,4 +39,4 @@ class ShortcutItem extends React.Component {
     }
 }
 
-export default ShortcutItem;
+export default connect(mapStateToProps)(ShortcutItem);

@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {showModal} from '../../actions/ui';
 import '../../styles/components/ShortcutModal.css';
 
-@isModal('SHORTCUT')
+
 class ShortcutModal extends Component {
     
     render () {
@@ -53,4 +53,4 @@ const mapStateToProps = (state) => {
         loading : state.shortcutsState.loadingSelectedShortcut,
      }
 }
-export default connect(mapStateToProps)(ShortcutModal);
+export default connect(mapStateToProps)(isModal('SHORTCUT')(ShortcutModal));

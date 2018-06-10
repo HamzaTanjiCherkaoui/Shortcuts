@@ -11,7 +11,7 @@ const mapStateToProps = (state) => {
     return ({shortcuts :visibleShortcuts , fetching, fetched})
 };
 
-@connect(mapStateToProps)
+
 class SearchResult extends React.Component {
     state = {page:1};
      getNextShortcuts = ()=> {
@@ -52,4 +52,4 @@ class SearchResult extends React.Component {
 
 
 
-export default SearchResult;
+export default connect(mapStateToProps)(SearchResult);

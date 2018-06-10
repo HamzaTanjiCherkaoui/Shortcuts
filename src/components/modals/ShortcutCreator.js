@@ -4,7 +4,7 @@ import {addShortcut} from '../../actions/shortcuts';
 import isModal from '../utils/HOCModal';
 import '../../styles/components/ShortcutCreator.css';
 
-@connect()@isModal('SHORTCUT_CREATOR')
+
 class ShortcutCreator extends Component {
     state = {
         shortcutButtons: [],
@@ -153,4 +153,4 @@ class ShortcutCreator extends Component {
     }
 }
 
-export default ShortcutCreator;
+export default connect()(isModal('SHORTCUT_CREATOR')(ShortcutCreator));

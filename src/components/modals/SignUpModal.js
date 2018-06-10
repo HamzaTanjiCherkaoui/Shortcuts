@@ -3,7 +3,7 @@ import isModal from '../utils/HOCModal';
 
 import '../../styles/components/SignUpModal.css';
 
-@isModal('SIGNUP') 
+ 
 class SignUpModal extends Component {
     
     render () {
@@ -14,4 +14,4 @@ class SignUpModal extends Component {
     }
 }
 
-export default SignUpModal;
+export default isModal('SIGNUP')(SignUpModal);
